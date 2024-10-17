@@ -1,30 +1,9 @@
-import { useState, useEffect } from "react";
-
-const lastKnownRepoCount = 65;
-const githubUrl = "https://api.github.com/users/midKnight92";
+import useGithubData from "../useGithubData";
+import useDocumentTitle from "../useDocumentTitle";
 
 export default ({ title }) => {
-  const [data, setData] = useState({});
-  useEffect(() => {
-    document.title = title;
-  }, []);
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await fetch(githubUrl);
-        if (response.ok) {
-          const jsonData = await response.json();
-          if (!Object.keys(jsonData).length)
-            throw new Error("No Data from Github");
-          setData(jsonData);
-        } else {
-          throw new Error("Bad response from Github");
-        }
-      } catch (e) {
-        console.error(e);
-      }
-    })();
-  }, []);
+  const data = useGithubData();
+  useDocumentTitle({ title });
   return (
     <div>
       <h1>Projects</h1>

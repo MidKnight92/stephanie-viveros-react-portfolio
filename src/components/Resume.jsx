@@ -1,8 +1,6 @@
-import { useEffect } from "react";
+import useDocumentTitle from "../useDocumentTitle";
 
 export default ({ title }) => {
-  useEffect(() => {
-    document.title = title;
-  }, []);
+  useDocumentTitle({ title });
   return <p>resume</p>;
 };
