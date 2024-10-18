@@ -82,7 +82,7 @@ export default ({ title }) => {
             onChange={handleChange}
             name="message"
             value={formData.message}
-            maxlength="500"
+            maxLength="500"
             required
           ></textarea>{" "}
         </label>
