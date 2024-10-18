@@ -45,8 +45,8 @@ const Footer = () => {
 
         <div>
           <p>
-            Site built by Stephanie Viveros using React, Vite, TailwindCSS,
-            JavaScript, determination & curiosity.
+            Site built by Stephanie Viveros using React, React Router, Vite, Tailwind CSS, &
+            JavaScript.
           </p>
         </div>
 

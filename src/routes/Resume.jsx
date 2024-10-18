@@ -2,5 +2,5 @@ import useDocumentTitle from "../useDocumentTitle";
 
 export default ({ title }) => {
   useDocumentTitle({ title });
-  return <p>resume</p>;
+  return (<h1>Resume</h1>);
 };

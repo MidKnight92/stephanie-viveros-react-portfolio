@@ -4,7 +4,7 @@ export default ({ title }) => {
   useDocumentTitle({ title });
   return (
     <div>
-      <h3>About Me</h3>
+      <h1>About Me</h1>
       {/* <img className="w-16 md:w-32 lg:w-48"  src={stephanieviveros} alt="stephanie viveros"/> */}
       <p>
         Hi! I’m Stephanie Viveros, a full-stack web developer based in Chicago.
