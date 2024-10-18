@@ -8,6 +8,7 @@ import Nav from "./components/Nav";
 import Terms from "./components/Terms";
 import { documentTitle } from "./constants";
 import Footer from "./components/Footer";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -35,6 +36,10 @@ function App() {
            <Route
             path="/terms"
             element={<Terms title={documentTitle.terms} />}
+          />
+           <Route
+            path="/*"
+            element={<NotFound title={documentTitle.error} />}
           />
         </Routes>
          <Footer />     
