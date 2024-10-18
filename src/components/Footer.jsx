@@ -21,7 +21,7 @@ const Footer = () => {
           <a href={linkedinUrl}>LinkedIn</a> | <a href={githubUrl}>GitHub</a>
         </div>
         <div>
-          <Link to="/about">About</Link> | <Link to="/projects">Projects</Link> | <Link to="/contact">Contact</Link>
+        <Link to="/home">Home</Link> | <Link to="/about">About</Link> | <Link to="/projects">Projects</Link> | <Link to="/contact">Contact</Link>
         </div>
         <div>
           <p>
@@ -45,8 +45,8 @@ const Footer = () => {
 
         <div>
           <p>
-            Site built by Stephanie Viveros using React, Vite, TailwindCSS, and
-            JavaScript.
+            Site built by Stephanie Viveros using React, Vite, TailwindCSS,
+            JavaScript, determination & curiosity.
           </p>
         </div>
 

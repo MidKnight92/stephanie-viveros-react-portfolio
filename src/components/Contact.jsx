@@ -1,60 +1,95 @@
 import useDocumentTitle from "../useDocumentTitle";
 import { useState } from "react";
-import { formspreeUrl } from "../constants";
 
 export default ({ title }) => {
   useDocumentTitle({ title });
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [showForm, setShowForm] = useState(true);
+  const [showErrorMessage, setShowErrorMessage] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setShowForm(false);
+    const form = e.target;
     try {
-      const reponse = await fetch(formspreeUrl, {
+      const reponse = await fetch("/", {
         method: "POST",
         headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: JSON.stringify(formData),
+        body: new URLSearchParams(new FormData(form)).toString(),
       });
       if (reponse.ok) {
         setShowForm(false);
         setFormData({ name: "", email: "", message: "" });
+      } else {
+        throw new Error(`${reponse.status}: ${reponse.statusText}`);
       }
     } catch (error) {
+      setShowForm(true);
+      setShowErrorMessage(true);
       console.error(error);
     }
   };
 
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   const formBody = (
-    <form onSubmit={handleSubmit}>
-      <label for="senderName">Name:{" "}</label>
-      <input
-        name="name"
-        id="senderName"
-        type="text"
-        placeholder="Full Name"
-        required
-      />
-      <label for="sender">Email:{" "}</label>
-      <input
-        name="_replyto"
-        type="email"
-        id="sender"
-        placeholder="Email"
-        required
-      />
-      <label for="textArea">Message:{" "}</label>
-      <textarea
-        name="message"
-        id="textArea"
-        placeholder="Enter text here..."
-        maxlength="500"
-        required
-      ></textarea>
-      <button type="submit">Send</button>
+    <form
+      name="contact"
+      method="POST"
+      data-netlify-recaptcha="true"
+      data-netlify="true"
+      onSubmit={handleSubmit}
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p>
+        <label>
+          Name:
+          <input
+            onChange={handleChange}
+            name="name"
+            type="text"
+            value={formData.name}
+            required
+          />
+        </label>
+      </p>
+      <p>
+        <label>
+          Email:
+          <input
+            onChange={handleChange}
+            name="email"
+            type="email"
+            value={formData.email}
+            required
+          />{" "}
+        </label>
+      </p>
+      <p>
+        <label>
+          Message:{" "}
+          <textarea
+            onChange={handleChange}
+            name="message"
+            value={formData.message}
+            maxlength="500"
+            required
+          ></textarea>{" "}
+        </label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
     </form>
   );
 
@@ -65,9 +100,17 @@ export default ({ title }) => {
     </p>
   );
 
+  const errorMessage = (
+    <p>
+      Oops! Something went wrong while sending your message. Please try again,
+      or feel free to reach out to me directly (312) 883-3708. I’m excited to
+      connect and I will get in touch soon!
+    </p>
+  );
   return (
     <>
       <h1>Contact Me</h1>
+      {showErrorMessage && errorMessage}
       {showForm ? formBody : thankYouMessage}
     </>
   );
