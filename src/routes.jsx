@@ -1,3 +1,4 @@
+import { Navigate } from "react-router-dom";
 import Contact from "./routes/Contact";
 import Projects from "./routes/Projects";
 import Resume from "./routes/Resume";
@@ -13,6 +14,7 @@ const routes = [
     path: "/",
     element: <App />,
     children: [
+      { path: "/", element: <Navigate to="/home" /> },
       { path: "home", element: <Home title={documentTitle.home} /> },
       {
         path: "about",
