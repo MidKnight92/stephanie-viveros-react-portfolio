@@ -1,7 +1,7 @@
 import useGithubData from "../useGithubData";
 import useDocumentTitle from "../useDocumentTitle";
 
-export default ({ title }) => {
+const Projects = ({ title }) => {
   const data = useGithubData();
   useDocumentTitle({ title });
   return (
@@ -11,3 +11,5 @@ export default ({ title }) => {
     </div>
   );
 };
+
+export default Projects;

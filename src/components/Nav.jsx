@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default () => {
+const Nav = () => {
   return (
     <nav>
       <ul>
@@ -23,3 +23,5 @@ export default () => {
     </nav>
   );
 };
+
+export default Nav;

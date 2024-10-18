@@ -1,6 +1,6 @@
 import useDocumentTitle from "../useDocumentTitle";
 
-export default ({ title }) => {
+const Home = ({ title }) => {
   useDocumentTitle({ title });
   return (
     <div>
@@ -16,3 +16,5 @@ export default ({ title }) => {
     </div>
   );
 };
+
+export default Home;

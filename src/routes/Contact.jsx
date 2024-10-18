@@ -1,7 +1,7 @@
 import useDocumentTitle from "../useDocumentTitle";
 import { useState } from "react";
 
-export default ({ title }) => {
+const Contact = ({ title }) => {
   useDocumentTitle({ title });
   const [formData, setFormData] = useState({
     name: "",
@@ -115,3 +115,6 @@ export default ({ title }) => {
     </>
   );
 };
+
+
+export default Contact;
