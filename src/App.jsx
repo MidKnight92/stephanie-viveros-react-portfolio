@@ -5,14 +5,7 @@ import Projects from "./components/Projects";
 import Resume from "./components/Resume";
 import About from "./components/About";
 import Nav from "./components/Nav";
-
-const documentTitle = {
-  home: "Stephanie Viveros | Home",
-  about: "Stephanie Viveros | About",
-  contact: "Stephanie Viveros | Contact",
-  projects: "Stephanie Viveros | Projects",
-  resume: "Stephanie Viveros | Resume",
-};
+import { documentTitle } from "./constants";
 
 function App() {
   return (
