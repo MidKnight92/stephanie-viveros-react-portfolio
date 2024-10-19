@@ -1,5 +1,6 @@
 import useDocumentTitle from "../useDocumentTitle";
 import { useState } from "react";
+import { Filter } from "bad-words";
 
 const Contact = ({ title }) => {
   useDocumentTitle({ title });
@@ -10,28 +11,31 @@ const Contact = ({ title }) => {
   });
   const [showForm, setShowForm] = useState(true);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
+  const [isContentClean, setIsContentClean] = useState(true);
+  const filter = new Filter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const form = e.target;
-    try {
-      const reponse = await fetch("/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams(new FormData(form)).toString(),
-      });
-      if (reponse.ok) {
-        setShowForm(false);
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        throw new Error(`${reponse.status}: ${reponse.statusText}`);
+    if (!isProfane()) {
+      const form = e.target;
+      try {
+        const reponse = await fetch("/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams(new FormData(form)).toString(),
+        });
+        if (reponse.ok) {
+          setShowForm(false);
+          setFormData({ name: "", email: "", message: "" });
+        } else {
+          throw new Error(`${reponse.status}: ${reponse.statusText}`);
+        }
+      } catch (error) {
+        setShowErrorMessage(true);
+        console.error(error);
       }
-    } catch (error) {
-      setShowForm(true);
-      setShowErrorMessage(true);
-      console.error(error);
     }
   };
 
@@ -40,6 +44,14 @@ const Contact = ({ title }) => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const isProfane = () => {
+    const hasProfanity = Object.values(formData).some((input) =>
+      filter.isProfane(input)
+    );
+    setIsContentClean(!hasProfanity);
+    return hasProfanity;
   };
 
   const formBody = (
@@ -107,14 +119,21 @@ const Contact = ({ title }) => {
       connect and I will get in touch soon!
     </p>
   );
+
+  const profanityMessage = (
+    <p>
+      Your input contains language that is not allowed. Please revise your entry
+      and try again.
+    </p>
+  );
   return (
     <>
       <h1>Contact Me</h1>
       {showErrorMessage && errorMessage}
+      {!isContentClean && profanityMessage}
       {showForm ? formBody : thankYouMessage}
     </>
   );
 };
-
 
 export default Contact;
