@@ -9,9 +9,8 @@ const Contact = ({ title }) => {
     email: "",
     message: "",
   });
-  const [showForm, setShowForm] = useState(true);
-  const [showErrorMessage, setShowErrorMessage] = useState(false);
-  const [isContentClean, setIsContentClean] = useState(true);
+  const [showMessage, setShowMessage] = useState(false);
+  const [message, setMessage] = useState("");
   const filter = new Filter();
 
   const handleSubmit = async (e) => {
@@ -27,16 +26,17 @@ const Contact = ({ title }) => {
           body: new URLSearchParams(new FormData(form)).toString(),
         });
         if (reponse.ok) {
-          setShowForm(false);
+          setMessage(thankYouMessage);
           setFormData({ name: "", email: "", message: "" });
         } else {
+          setMessage(errorMessage);
           throw new Error(`${reponse.status}: ${reponse.statusText}`);
         }
       } catch (error) {
-        setShowErrorMessage(true);
         console.error(error);
       }
     }
+    setShowMessage(true);
   };
 
   const handleChange = (e) => {
@@ -50,7 +50,8 @@ const Contact = ({ title }) => {
     const hasProfanity = Object.values(formData).some((input) =>
       filter.isProfane(input)
     );
-    setIsContentClean(!hasProfanity);
+    setShowMessage(hasProfanity);
+    hasProfanity && setMessage(profanityMessage);
     return hasProfanity;
   };
 
@@ -105,33 +106,20 @@ const Contact = ({ title }) => {
     </form>
   );
 
-  const thankYouMessage = (
-    <p>
-      Thanks for your message! I’m looking forward to connecting and exploring
-      how we can build something great together! Talk to you soon.
-    </p>
-  );
+  const thankYouMessage =
+    "Thanks for your message! I’m looking forward to connecting and exploring how we can build something great together! Talk to you soon.";
 
-  const errorMessage = (
-    <p>
-      Oops! Something went wrong while sending your message. Please try again,
-      or feel free to reach out to me directly (312) 883-3708. I’m excited to
-      connect and I will get in touch soon!
-    </p>
-  );
+  const errorMessage =
+    "Oops! Something went wrong while sending your message. Please try again, or feel free to reach out to me directly (312) 883-3708. I’m excited to connect and I will get in touch soon!";
 
-  const profanityMessage = (
-    <p>
-      Your input contains language that is not allowed. Please revise your entry
-      and try again.
-    </p>
-  );
+  const profanityMessage =
+    "Your input contains language that is not allowed. Please revise your entry and try again.";
+
   return (
     <>
       <h1>Contact Me</h1>
-      {showErrorMessage && errorMessage}
-      {!isContentClean && profanityMessage}
-      {showForm ? formBody : thankYouMessage}
+      <div style={{ height: "30px" }}>{showMessage && <p>{message}</p>}</div>
+      {formBody}
     </>
   );
 };
