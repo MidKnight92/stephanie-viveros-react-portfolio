@@ -1,8 +1,10 @@
 import useGithubData from "../useGithubData";
 import useDocumentTitle from "../useDocumentTitle";
 import { githubUrl } from "../constants";
-import { Suspense, useState } from "react";
+import { Suspense, useState, lazy } from "react";
 import Loading from "../components/Loading";
+
+const Videos = lazy(() => import('../components/Videos'));
 
 const Projects = ({ title }) => {
   const [displayOlderProjects, setDisplayOlderProjects] = useState(false);
