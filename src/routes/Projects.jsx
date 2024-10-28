@@ -1,84 +1,15 @@
 import useGithubData from "../useGithubData";
 import useDocumentTitle from "../useDocumentTitle";
 import { githubUrl } from "../constants";
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import Loading from "../components/Loading";
 
 const Projects = ({ title }) => {
   const [displayOlderProjects, setDisplayOlderProjects] = useState(false);
   const data = useGithubData();
   useDocumentTitle({ title });
-  const network = (
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/MZFUJL42RWo?si=1c4MR37_2yo_embn"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-  );
-  const mail = (
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/MZFUJL42RWo?si=1c4MR37_2yo_embn"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-  );
-  const wiki = (
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/TtKHPUt4Yxs?si=jr8Gpfj4iQ_VN7Po"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-  );
-  const theBookMark = (
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/qJHvN7Vcmso?si=upxwYl8QY2Xw9Fkm"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-  );
-  const oldPersonalWebsite = (
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/qJHvN7Vcmso?si=upxwYl8QY2Xw9Fkm"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-  );
-  const chromeExtensionCovid19 = (
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/DJ84-YiamUc?si=W1tUbMjOzIXi63X3"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-  );
+ 
+ 
   const handleClick = () => {
     setDisplayOlderProjects(!displayOlderProjects);
   };
@@ -95,12 +26,9 @@ const Projects = ({ title }) => {
      : (
         <section>
           <h2>Projects I completed for CS50W</h2>
-          {network}
-          {mail}
-          {wiki}
-          {theBookMark}
-          {oldPersonalWebsite}
-          {chromeExtensionCovid19}
+         <Suspense fallback={<Loading />}>
+          <Videos />
+         </Suspense>
         </section>
       )}
       {displayOlderProjects && <button onClick={handleClick}>Close Older Projects</button>}
