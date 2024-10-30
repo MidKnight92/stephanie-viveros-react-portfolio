@@ -68,7 +68,7 @@ const Footer = () => {
     </div>
   );
   return (
-    <footer>
+    <footer className="absolute bottom-0">
       <section>
         {copyrightAndContact}
         {websiteLinks}
