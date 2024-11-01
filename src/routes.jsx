@@ -3,7 +3,6 @@ import Contact from "./routes/Contact";
 import Projects from "./routes/Projects";
 import Resume from "./routes/Resume";
 import About from "./routes/About";
-import Terms from "./routes/Terms";
 import Home from "./components/Home";
 import { documentTitle } from "./constants";
 import NotFound from "./components/NotFound";
@@ -31,10 +30,6 @@ const routes = [
       {
         path: "resume",
         element: <Resume title={documentTitle.resume} />,
-      },
-      {
-        path: "terms",
-        element: <Terms title={documentTitle.terms} />,
       },
       {
         path: "*",

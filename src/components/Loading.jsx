@@ -1,7 +1,5 @@
-const Loading = ()=> {
-    return (
-      <h4>Loading...</h4>
-    )
-  }
-  
+const Loading = () => {
+  return <i className="fa-solid fa-spinner fa-spin-pulse"></i>;
+};
+
 export default Loading;

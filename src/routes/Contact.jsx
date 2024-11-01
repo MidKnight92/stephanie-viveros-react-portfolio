@@ -65,8 +65,8 @@ const Contact = ({ title }) => {
     >
       <input type="hidden" name="form-name" value="contact" />
       <p>
-        <label>
-          Name:
+        <label className="block">
+          <span className="block">Name</span>
           <input
             onChange={handleChange}
             name="name"
@@ -77,8 +77,8 @@ const Contact = ({ title }) => {
         </label>
       </p>
       <p>
-        <label>
-          Email:
+        <label className="block">
+          <span className="block">Email</span>
           <input
             onChange={handleChange}
             name="email"
@@ -89,8 +89,8 @@ const Contact = ({ title }) => {
         </label>
       </p>
       <p>
-        <label>
-          Message:{" "}
+        <label className="block">
+          <span className="block">Message</span>
           <textarea
             onChange={handleChange}
             name="message"
@@ -101,7 +101,9 @@ const Contact = ({ title }) => {
         </label>
       </p>
       <p>
-        <button type="submit">Send</button>
+        <button className="rounded-md ring-2 ring-black" type="submit">
+          Send
+        </button>
       </p>
     </form>
   );
@@ -116,11 +118,13 @@ const Contact = ({ title }) => {
     "Your input contains language that is not allowed. Please revise your entry and try again.";
 
   return (
-    <>
-      <h1>Contact Me</h1>
+    <div className="text-font-color outline outline-offset-2 outline-1 m-20">
+      <h1 className="font-header text-font-color text-6xl font-bold mx-auto">
+        Contact Me
+      </h1>
       <div style={{ height: "30px" }}>{showMessage && <p>{message}</p>}</div>
       {formBody}
-    </>
+    </div>
   );
 };
 
