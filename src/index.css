@@ -27,8 +27,6 @@
     .footer-link {
         @apply
         block 
-        text-sm 
-        sm:text-xs 
         hover:underline
     }
 
