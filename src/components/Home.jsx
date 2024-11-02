@@ -10,7 +10,7 @@ const Home = ({ title }) => {
         alt="Stephanie Viveros headshot"
       />
       <div>
-        <h1 className="ml-20 lg:text-6xl xl:text-7xl md:text-5xl sm:text-4xl">
+        <h1 className="ml-20">
           Hello, I'm Stephanie!
         </h1>
         <h2 className="ml-20 text-4xl mt-10">
@@ -62,9 +62,7 @@ export default Home;
 // 	•	Desktop: text-3xl
 // 	•	Large Desktop: text-4xl
 // 	•	Body Text:
-// 	•	Mobile: text-base
-// 	•	Tablet: text-lg
-// 	•	Desktop: text-xl
+
 // 	•	Button Text:
 // 	•	Mobile: text-base
 // 	•	Tablet: text-lg
