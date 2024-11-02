@@ -57,6 +57,7 @@ const Contact = ({ title }) => {
 
   const formBody = (
     <form
+    className="font-medium"
       name="contact"
       method="POST"
       data-netlify-recaptcha="true"
@@ -64,7 +65,7 @@ const Contact = ({ title }) => {
       onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
-      <p>
+      <p className="my-2">
         <label className="block">
           <span className="block">Name</span>
           <input
@@ -76,7 +77,7 @@ const Contact = ({ title }) => {
           />
         </label>
       </p>
-      <p>
+      <p className="my-5">
         <label className="block">
           <span className="block">Email</span>
           <input
@@ -88,7 +89,7 @@ const Contact = ({ title }) => {
           />{" "}
         </label>
       </p>
-      <p>
+      <p className="my-5">
         <label className="block">
           <span className="block">Message</span>
           <textarea
@@ -100,8 +101,8 @@ const Contact = ({ title }) => {
           ></textarea>{" "}
         </label>
       </p>
-      <p>
-        <button className="rounded-md ring-2 ring-black" type="submit">
+      <p className="my-5">
+        <button className="px-5 py-1 border-2 hover:font-semibold" type="submit">
           Send
         </button>
       </p>
@@ -118,8 +119,8 @@ const Contact = ({ title }) => {
     "Your input contains language that is not allowed. Please revise your entry and try again.";
 
   return (
-    <div className="text-font-color outline outline-offset-2 outline-1 m-20">
-      <h1 className="font-header text-font-color text-6xl font-bold mx-auto">
+    <div className="main-content text-center">
+      <h1>
         Contact Me
       </h1>
       <div style={{ height: "30px" }}>{showMessage && <p>{message}</p>}</div>

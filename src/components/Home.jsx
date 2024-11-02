@@ -3,14 +3,14 @@ import useDocumentTitle from "../useDocumentTitle";
 const Home = ({ title }) => {
   useDocumentTitle({ title });
   return (
-    <div className=" text-font-color outline outline-offset-4 outline-3 mt-20 mx-20 flex p-5">
+    <div className="main-content flex">
       <img
         className="rounded-lg max-h-80"
         src="./../../public/images/stephanie-viveros-headshot.jpg"
         alt="Stephanie Viveros headshot"
       />
       <div>
-        <h1 className="font-header font-bold ml-20 lg:text-6xl xl:text-7xl md:text-5xl sm:text-4xl">
+        <h1 className="ml-20 lg:text-6xl xl:text-7xl md:text-5xl sm:text-4xl">
           Hello, I'm Stephanie!
         </h1>
         <h2 className="ml-20 text-4xl mt-10">

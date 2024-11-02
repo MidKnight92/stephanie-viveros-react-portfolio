@@ -2,3 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+@layer base{
+    h1 {
+        @apply
+        text-6xl 
+        font-bold 
+        mx-auto
+    }
+}
+
+
+@layer components {
+    .footer-link {
+        @apply
+        block 
+        text-sm 
+        sm:text-xs 
+        hover:underline
+    }
+
+    .main-content {
+        @apply
+        outline 
+        outline-offset-4 
+        outline-4 
+        mt-20 
+        mx-20  
+        p-10
+    }
+}

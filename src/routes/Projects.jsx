@@ -15,8 +15,8 @@ const Projects = ({ title }) => {
     setDisplayOlderProjects(!displayOlderProjects);
   };
   return (
-    <div className="text-font-color outline outline-offset-2 outline-1 m-20 p-5">
-      <h1 className="font-header text-6xl font-bold mx-auto">Projects</h1>
+    <div className="main-content">
+      <h1>Projects</h1>
       <p>Here are some of the projects I worked on</p>
       <section>
         <h2>Newer Projects</h2>

@@ -3,20 +3,20 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   return (
     <nav className="mt-5">
-      <ul className="flex flex-row text-font-color text-center">
-        <li className="basis-1/5 text-lg sm:text-base md:text-lg">
+      <ul className="flex flex-row text-center">
+        <li className="basis-1/5 text-lg sm:text-base md:text-lg hover:underline">
           <Link to="/home">Home</Link>
         </li>
-        <li className="basis-1/5 text-lg sm:text-base md:text-lg">
+        <li className="basis-1/5 text-lg sm:text-base md:text-lg hover:underline">
           <Link to="/about">About</Link>
         </li>
-        <li className="basis-1/5 text-lg sm:text-base md:text-lg">
+        <li className="basis-1/5 text-lg sm:text-base md:text-lg hover:underline">
           <Link to="/contact">Contact</Link>
         </li>
-        <li className="basis-1/5 text-lg sm:text-base md:text-lg">
+        <li className="basis-1/5 text-lg sm:text-base md:text-lg hover:underline">
           <Link to="/projects">Projects</Link>
         </li>
-        <li className="basis-1/5 text-lg sm:text-base md:text-lg">
+        <li className="basis-1/5 text-lg sm:text-base md:text-lg hover:underline">
           <Link to="/resume">Resume</Link>
         </li>
       </ul>

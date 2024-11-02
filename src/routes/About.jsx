@@ -3,11 +3,11 @@ import useDocumentTitle from "../useDocumentTitle";
 const About = ({ title }) => {
   useDocumentTitle({ title });
   return (
-    <div className="outline outline-offset-2 outline-1 m-20 p-5">
-      <h1 className="font-header text-font-color text-6xl font-bold mx-auto">
+    <div className="main-content">
+      <h1>
         About Me
       </h1>
-      <div className="items-center text-font-color">
+      <div className="items-center">
         <div className="font-body">
           <p>
             Hi! I’m Stephanie Viveros, a full-stack web developer based in

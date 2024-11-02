@@ -4,14 +4,9 @@ export default {
   theme: {
     colors: {
       background: "#e8e6e6",
-      "font-color": "#00000",
     },
     fontFamily: {
-      nav: ["Montserrat"],
-      header: ["Montserrat"],
-      body: ["Montserrat"],
-      cta: ["Montserrat"],
-      footer: ["Montserrat"],
+      sans: ["Montserrat", "sans-serif"]
     },
     extend: {},
   },
