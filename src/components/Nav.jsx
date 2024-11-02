@@ -3,21 +3,21 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   return (
     <nav className="mt-5">
-      <ul className="flex flex-row text-center container">
+      <ul className="flex flex-row text-center">
         <li className="grow nav">
-          <Link to="/home">Home</Link>
+          <Link to="/home">< SV /></Link>
         </li>
         <li className="grow nav">
           <Link to="/about">About</Link>
         </li>
         <li className="grow nav">
-          <Link to="/contact">Contact</Link>
+          <Link to="/resume">Resume</Link>
         </li>
         <li className="grow nav">
           <Link to="/projects">Projects</Link>
         </li>
         <li className="grow nav">
-          <Link to="/resume">Resume</Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>

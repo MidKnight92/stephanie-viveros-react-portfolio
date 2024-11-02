@@ -1,5 +1,92 @@
 import useDocumentTitle from "../useDocumentTitle";
 
+const resume = {
+  employmentHistory: [
+    {
+      title: "Associate Consultant",
+      company: "Capgemini",
+      location: "Chicago, IL",
+      duration: "June 2021 - Sep. 2024",
+    },
+    {
+      title: "Owner",
+      company: "U.S.Installers LLC",
+      location: "Hammond, IN",
+      duration: "July 2018 - Sep. 2019",
+    },
+    {
+      title: "Shift Supervisor",
+      company: "Starbucks Coffee Corporation",
+      location: "Schererville, IN",
+      duration: "May 2012 - June 2023",
+    },
+    {
+      title: "Starbucks Team Member",
+      company: "Target Corporation",
+      location: "Munster, IN",
+      duration: "Oct. 2010 - May 2012",
+    },
+  ],
+  education: {
+    title: "Bachelor Arts - Business, Entrepreneurship",
+    facility: "Purdue University - Calumet",
+    location: "Hammond, IN",
+    duration: "2010 - 2014",
+  },
+  certifications: [
+    {
+      title: "Software Engineering Immersive",
+      company: "General Assembly",
+      duration: "2019",
+    },
+    {
+      title: "CS50's Introduction to Computer Science",
+      company: "edX",
+      duration: "2020",
+    },
+    {
+      title: "Oracle Certified Associate, Java SE 8 Programmer",
+      company: "Oracle",
+      duration: "2021",
+    },
+    {
+      title: "TypeScript Essential Training",
+      company: "LinkedIn Learning",
+      duration: "2021",
+    },
+    {
+      title: "Learning Jira Software",
+      company: "LinkedIn Learning",
+      duration: "2020",
+    },
+    {
+      title: "Postman Essential Training",
+      company: "LinkedIn Learning",
+      duration: "2021",
+    },
+    {
+      title: "React Basics",
+      company: "Coursera",
+      duration: "2024",
+    },
+    {
+      title: "Angular - The Complete Guide (2024 Edition)",
+      company: "Udemy",
+      duration: "2024 - 2025",
+    },
+    {
+      title: "Angular (Basic) Certificate",
+      company: "HackerRank",
+      duration: "2024",
+    },
+    {
+      title: "Angular (Intermediate) Certificate",
+      company: "HackerRank",
+      duration: "2024",
+    },
+  ],
+};
+
 const Resume = ({ title }) => {
   useDocumentTitle({ title });
   return (
@@ -14,13 +101,6 @@ const Resume = ({ title }) => {
             </h5>
             <p>Chicago, IL</p>
             <p>June 2021 - Sep. 2024</p>
-          </div>
-          <div>
-            <h5>
-              Software Engineer Fellow<span> - General Assembly</span>
-            </h5>
-            <p>Chicago, IL</p>
-            <p>Sep. 2019 - Dec. 2019</p>
           </div>
           <div>
             <h5>

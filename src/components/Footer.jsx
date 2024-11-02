@@ -72,7 +72,7 @@ const Footer = () => {
             reserved.
           </p>
           <p className="text-sm sm:text-xs">
-            Site built by Stephanie Viveros using React, React Router, Vite,
+            Site built by Stephanie Viveros using React, React Router, Vite,Font Awesome,
             Tailwind CSS, & JavaScript.
           </p>
         </div>
