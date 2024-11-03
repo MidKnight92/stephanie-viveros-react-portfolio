@@ -5,7 +5,7 @@ const Nav = () => {
     <nav className="mt-5">
       <ul className="flex flex-row text-center">
         <li className="grow nav">
-          <Link to="/home">< SV /></Link>
+          <Link to="/home">Home</Link>
         </li>
         <li className="grow nav">
           <Link to="/about">About</Link>

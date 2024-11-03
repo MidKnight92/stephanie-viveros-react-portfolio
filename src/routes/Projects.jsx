@@ -16,7 +16,7 @@ const Projects = ({ title }) => {
   };
   return (
     <div className="main-content">
-      <h1>Projects</h1>
+      <h1 className="text-center">Projects</h1>
       <p>Here are some of the projects I worked on</p>
       <section>
         <h2>Newer Projects</h2>

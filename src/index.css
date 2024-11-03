@@ -3,50 +3,52 @@
 @tailwind utilities;
 @tailwind variants;
 
-@layer base{
-    h1 {
-        @apply
-        font-bold 
+@layer base {
+  h1 {
+    @apply font-bold 
         mx-auto
         lg:text-6xl 
         xl:text-7xl 
         md:text-5xl 
-        sm:text-4xl
-    }
+        sm:text-4xl;
+  }
 
-    p {
-        @apply
-        sm:text-base
+  p {
+    @apply sm:text-base
         md:text-lg
-        lg:text-xl 
-    }
+        lg:text-xl;
+  }
 }
 
-
 @layer components {
-    .footer-link {
-        @apply
-        block 
-        hover:underline
-    }
+  .footer-link {
+    @apply block 
+        hover:underline;
+  }
 
-    .main-content {
-        @apply
-        outline 
+  .main-content {
+    @apply outline 
         outline-offset-4 
         outline-4 
         mt-20 
         mx-20  
-        p-10
-    }
+        p-10;
+  }
 
-    .nav {
-        @apply 
-        sm:text-base 
+  .nav {
+    @apply sm:text-base 
         md:text-lg 
         lg:text-lg
         xl:text-lg
-        hover:underline
-        
-    }
+        hover:underline;
+  }
+
+  .btn {
+    @apply bg-black
+    text-white 
+    px-20
+    py-2 
+    rounded-full 
+    hover:font-semibold;
+  }
 }

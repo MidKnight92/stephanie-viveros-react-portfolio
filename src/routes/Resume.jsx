@@ -1,179 +1,67 @@
 import useDocumentTitle from "../useDocumentTitle";
+import { resume } from "../constants";
 
-const resume = {
-  employmentHistory: [
-    {
-      title: "Associate Consultant",
-      company: "Capgemini",
-      location: "Chicago, IL",
-      duration: "June 2021 - Sep. 2024",
-    },
-    {
-      title: "Owner",
-      company: "U.S.Installers LLC",
-      location: "Hammond, IN",
-      duration: "July 2018 - Sep. 2019",
-    },
-    {
-      title: "Shift Supervisor",
-      company: "Starbucks Coffee Corporation",
-      location: "Schererville, IN",
-      duration: "May 2012 - June 2023",
-    },
-    {
-      title: "Starbucks Team Member",
-      company: "Target Corporation",
-      location: "Munster, IN",
-      duration: "Oct. 2010 - May 2012",
-    },
-  ],
-  education: {
-    title: "Bachelor Arts - Business, Entrepreneurship",
-    facility: "Purdue University - Calumet",
-    location: "Hammond, IN",
-    duration: "2010 - 2014",
-  },
-  certifications: [
-    {
-      title: "Software Engineering Immersive",
-      company: "General Assembly",
-      duration: "2019",
-    },
-    {
-      title: "CS50's Introduction to Computer Science",
-      company: "edX",
-      duration: "2020",
-    },
-    {
-      title: "Oracle Certified Associate, Java SE 8 Programmer",
-      company: "Oracle",
-      duration: "2021",
-    },
-    {
-      title: "TypeScript Essential Training",
-      company: "LinkedIn Learning",
-      duration: "2021",
-    },
-    {
-      title: "Learning Jira Software",
-      company: "LinkedIn Learning",
-      duration: "2020",
-    },
-    {
-      title: "Postman Essential Training",
-      company: "LinkedIn Learning",
-      duration: "2021",
-    },
-    {
-      title: "React Basics",
-      company: "Coursera",
-      duration: "2024",
-    },
-    {
-      title: "Angular - The Complete Guide (2024 Edition)",
-      company: "Udemy",
-      duration: "2024 - 2025",
-    },
-    {
-      title: "Angular (Basic) Certificate",
-      company: "HackerRank",
-      duration: "2024",
-    },
-    {
-      title: "Angular (Intermediate) Certificate",
-      company: "HackerRank",
-      duration: "2024",
-    },
-  ],
-};
+
+const expierence = resume.Expierence.map(
+  ({ title, company, description, duration, location }) => (
+    <div className="mb-6">
+      <h3 className="text-lg md:text-lg font-medium">
+        {title} /
+        <span className="font-light"> {company}</span>
+      </h3>
+      <p className="text-gray-600 sm:text-sm md:text-sm lg:text-sm">{location}</p>
+      <p className="text-gray-600 text-sm sm:text-xs">{duration}</p>
+      <p className="text-base md:text-lg leading-relaxed">{description}</p>
+    </div>
+  )
+);
+
+const certifications = resume.Certifications.map(
+  ({ title, company, duration }) => (
+    <div className="mb-6">
+      <h3 className="text-lg md:text-lg font-medium">
+        {title} /
+        <span className="font-light"> {company}</span>
+      </h3>
+      <p className="text-gray-600 text-sm sm:text-xs">{duration}</p>
+    </div>
+  )
+);
 
 const Resume = ({ title }) => {
   useDocumentTitle({ title });
   return (
     <div className="main-content text-center">
       <h1>Resume</h1>
-      <main>
-        <section>
-          <h4>Experience</h4>
-          <div>
-            <h5>
-              Associate Consultant<span> - Capgemini</span>
-            </h5>
-            <p>Chicago, IL</p>
-            <p>June 2021 - Sep. 2024</p>
-          </div>
-          <div>
-            <h5>
-              Business Owner<span> - U.S.Installers LLC</span>
-            </h5>
-            <p>Hammond, IN</p>
-            <p>July 2018 - Sep. 2019</p>
-          </div>
-          <div>
-            <h5>
-              Shift Supervisor<span> - Starbucks Coffee Corporation</span>
-            </h5>
-            <p>Schererville, IN</p>
-            <p>May 2012 - June 2023</p>
-          </div>
-          <div>
-            <h5>
-              Starbucks Team Member<span> - Target Corporation</span>
-            </h5>
-            <p>Munster, IN</p>
-            <p>Oct. 2010 - May 2012</p>
-          </div>
-        </section>
-        <section>
-          <h4>Education</h4>
-          <div>
-            <h5>
-              Software Engineer Immersive<span> - General Assembly</span>
-            </h5>
-            <p>Chicago, IL</p>
-            <p>Sep. 2019 - Dec. 2019</p>
-          </div>
-          <div>
-            <h5>
-              Bachelor Degree in Business
-              <span> - Purdue University Calumet</span>
-            </h5>
-            <p>Hammond, IN</p>
-            <p>2010 - 2014</p>
-          </div>
-          <div>
-            <h5>
-              High School Diploma<span> - Whiting High School</span>
-            </h5>
-            <p>Whiting, IN</p>
-            <p>2006 - 2010</p>
-          </div>
-        </section>
-        <section>
-          <h4>Professional Certifications</h4>
-          <div>
-            <h5>
-              Oracle Certified Associate, Java SE 8 Programmer
-              <span> - Oracle</span>
-            </h5>
-            <p>Aug. 2021</p>
-          </div>
-          <div>
-            <h5>
-              CS50's Introduction to Computer Science
-              <span> - Harvardx thru edX</span>
-            </h5>
-            <p>July 2020</p>
-          </div>
-          <div>
-            <h5>
-              Introduction to Java Programming: Starting to code in Java
-              <span> - Universidad Carlos III de Madrid thru edX</span>
-            </h5>
-            <p>September 2020</p>
-          </div>
-        </section>
-      </main>
+      <section className="my-8">
+        <h2 className="text-2xl font-semibold sm:text-xl md:text-3xl lg:text-2xl mb-4">
+          Experience
+        </h2>
+        {expierence}
+      </section>
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold sm:text-xl md:text-3xl lg:text-2xl mb-4">
+          Education
+        </h2>
+        <div className="mb-6">
+          <h3 className="text-lg md:text-lg font-medium">{resume.Education.title}</h3>
+          <p className="text-gray-600 text-sm font-light">{resume.Education.facility}</p>
+          <p className="text-gray-600 text-sm sm:text-xs">{resume.Education.duration}</p>
+        </div>
+      </section>
+      <section>
+        <h2 className="text-2xl font-semibold sm:text-xl md:text-3xl lg:text-2xl mb-4">
+          Certifications
+        </h2>
+        {certifications}
+      </section>
+      <div>
+        <a
+          className="btn"
+        >
+          Download Resume
+        </a>
+      </div>
     </div>
   );
 };

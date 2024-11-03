@@ -13,21 +13,21 @@ const Home = ({ title }) => {
         <h1 className="ml-20">
           Hello, I'm Stephanie!
         </h1>
-        <h2 className="ml-20 text-4xl mt-10">
-          I am a full-stack software engineer.
+        <h2 className="ml-20 text-4xl mt-10 text-gray-600">
+          I am a full-stack Software Engineer.
         </h2>
         <p className="text-2xl ml-20 mt-10">
           I'm passionate about the amazing ways technology can enhance our
           lives. I love crafting user-friendly apps that not only look great but
           also make a positive difference every day.
         </p>
-        <p className="font-cta text-xl ml-20 mt-10">
+        <p className="italic font-light text-xl ml-20 mt-10">
           Let's Build Something Great!
         </p>
         <ul className="flex flex-row gap-10 justify-evenly mt-20">
           <li>
             <a target="_blank" href="https://github.com/MidKnight92">
-              <i className="fab fa-github" />
+              <i className="fa-brands fa-github fa-2xl hover:opacity-50" />
             </a>
           </li>
           <li>
@@ -35,12 +35,12 @@ const Home = ({ title }) => {
               target="_blank"
               href="https://www.linkedin.com/in/stephanie-viveros/"
             >
-              <i className="fab fa-linkedin" />
+              <i className="fa-brands fa-linkedin fa-2xl hover:opacity-50" />
             </a>
           </li>
           <li>
-            <a href="files/Stephanie_Viveros_Resume_2024.pdf" target="_blank">
-              <i className="fas fa-file-pdf" />
+            <a href="https://docs.google.com/document/d/14taZmzSKYwsTdVMHeAdPs3aSg9U5ZA94pt1s56VxX8g/edit?usp=sharing" target="_blank">
+              <i className="fa-solid fa-file-pdf fa-2xl hover:opacity-50" />
             </a>
           </li>
         </ul>
