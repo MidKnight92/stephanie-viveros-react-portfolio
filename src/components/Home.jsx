@@ -27,7 +27,7 @@ const Home = ({ title }) => {
         <ul className="flex flex-row gap-10 justify-evenly mt-20">
           <li>
             <a target="_blank" href="https://github.com/MidKnight92">
-              <i className="fa-brands fa-github fa-2xl hover:opacity-50" />
+              <i className="fa-brands fa-github fa-2xl hover:opacity-50 active:opacity-100" />
             </a>
           </li>
           <li>
@@ -35,12 +35,12 @@ const Home = ({ title }) => {
               target="_blank"
               href="https://www.linkedin.com/in/stephanie-viveros/"
             >
-              <i className="fa-brands fa-linkedin fa-2xl hover:opacity-50" />
+              <i className="fa-brands fa-linkedin fa-2xl hover:opacity-50 active:opacity-100" />
             </a>
           </li>
           <li>
             <a href="https://docs.google.com/document/d/14taZmzSKYwsTdVMHeAdPs3aSg9U5ZA94pt1s56VxX8g/edit?usp=sharing" target="_blank">
-              <i className="fa-solid fa-file-lines fa-2xl hover:opacity-50" />
+              <i className="fa-solid fa-file-lines fa-2xl hover:opacity-50 active:opacity-100" />
             </a>
           </li>
         </ul>

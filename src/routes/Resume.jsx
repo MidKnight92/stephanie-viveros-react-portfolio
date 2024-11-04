@@ -21,7 +21,7 @@ const Item = ({
     {facility && <p className="text-gray-600 text-sm font-light">{facility}</p>}
     {duration && <p className="text-gray-600 text-sm sm:text-xs">{duration}</p>}
     {description && (
-      <p className="text-base md:text-lg leading-relaxed">{description}</p>
+      <p className=" visible text-base md:text-lg leading-relaxed">{description}</p>
     )}
   </div>
 );
