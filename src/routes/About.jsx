@@ -3,8 +3,8 @@ import useDocumentTitle from "../useDocumentTitle";
 const About = ({ title }) => {
   useDocumentTitle({ title });
   return (
-    <div className="main-content">
-      <h1 className="text-center">
+    <div className="md:main-content text-center md:text-pretty">
+      <h1 className="">
         About Me
       </h1>
       <div className="items-center">

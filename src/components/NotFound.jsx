@@ -6,7 +6,7 @@ const NotFound = ({ title }) => {
   const error = useRouteError();
   console.log(error);
   return (
-    <div className="main-content">
+    <div className="md:main-content">
       <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
       <p>

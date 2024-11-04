@@ -7,7 +7,7 @@ const Home = ({ title }) => {
       <section className="mx-auto mt-10 lg:flex">
         <img
           className="mx-auto max-h-40 rounded-2xl md:ml-20 lg:rounded-lg md:mt-20 md:max-h-96"
-          src="./../../public/images/stephanie-viveros-headshot.jpg"
+          src="./../../public/images/me-charcoal-gray-bg.png"
           alt="Stephanie Viveros headshot"
         />
         <div className="mx-4 text-center">

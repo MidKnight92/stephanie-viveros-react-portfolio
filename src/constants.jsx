@@ -50,7 +50,7 @@ export const resume = {
       title: "Shift Supervisor",
       company: "Starbucks Coffee Corporation",
       location: "Schererville, IN",
-      duration: "May 2012 - June 2023",
+      duration: "May 2012 - June 2021",
       description: "",
     },
     {

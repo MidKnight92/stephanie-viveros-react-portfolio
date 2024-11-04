@@ -9,7 +9,7 @@ const Item = ({
   facility,
   description,
 }) => (
-  <div className="mb-4 text-right">
+  <div className="mb-4 md:text-right">
     <h3 className="text-lg md:text-lg font-medium">
       {title} /<span className="font-light"> {subtitle}</span>
     </h3>
@@ -61,22 +61,22 @@ const education = (
 const Resume = ({ title }) => {
   useDocumentTitle({ title });
   return (
-    <div className="main-content">
+    <div className="md:main-content">
       <h1 className="text-center mb-10">Resume</h1>
       <section>
-        <h2 className="-mb-8 resume-project-section-header">
+        <h2 className="md:-mb-8 resume-project-section-header">
           <span className="overline">Ex</span>perience
         </h2>
         {experience}
       </section>
       <section className="mt-10">
-        <h2 className="-mb-8 resume-project-section-header">
+        <h2 className="md:-mb-8 resume-project-section-header">
           <span className="overline">Ed</span>ucation
         </h2>
         <div className="mb-6">{education}</div>
       </section>
       <section className="mt-8">
-        <h2 className="-mb-8 resume-project-section-header">
+        <h2 className="md:-mb-8 resume-project-section-header">
           <span className="overline">Ce</span>rtifications
         </h2>
         {certifications}

@@ -139,10 +139,10 @@ const Contact = ({ title }) => {
     "Your input contains language that is not allowed. Please revise your entry and try again.";
 
   return (
-    <div className="main-content">
+    <div className="md:main-content">
       <h1 className="text-center">Contact Me</h1>
       <div className="text-center my-4">{showMessage && <p>{message}</p>}</div>
-      <div className="flex mt-6 gap-x-40 justify-center">
+      <div className="md:flex mt-6 md:gap-x-40 justify-center">
         {formBody}
         {contact}
       </div>
