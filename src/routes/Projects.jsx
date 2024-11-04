@@ -15,33 +15,31 @@ const Projects = ({ title }) => {
     setDisplayOlderProjects(!displayOlderProjects);
   };
   return (
-    <div className="main-content">
-      <h1 className="text-center">Projects</h1>
-      <p>Here are some of the projects I worked on</p>
+    <div className="main-content text-center">
+      <h1>Projects</h1>
+      <p>
+        Take a look at my <a className="text-gray-600 font-bold hover:underline" href={githubUrl}>GitHub</a>. I have{" "}
+        {data.public_repos} repositories that consist of personal, group,
+        assignments, and lessons that I have done from the start of my software engineering
+        journey.
+      </p>
       <section>
-        <h2>Newer Projects</h2>
-        <i>This website being my latest.</i>
+        <h2 className="resume-project-section-header text-center">Newer Projects</h2>
+        <p className="italic">This website being my latest.</p>
       </section>
       {!displayOlderProjects ? (
-        <button onClick={handleClick}>Show Older Projects</button>
+        <button className="btn" onClick={handleClick}>Show Older Projects</button>
       ) : (
         <section>
-          <h2>Projects I completed for CS50W</h2>
+          <h2 className="resume-project-section-header text-center">Older Projects</h2>
           <Suspense fallback={<Loading />}>
             <Videos />
           </Suspense>
         </section>
       )}
       {displayOlderProjects && (
-        <button onClick={handleClick}>Close Older Projects</button>
+        <button className="btn" onClick={handleClick}>Close Older Projects</button>
       )}
-
-      <p>
-        Take a look at my <a href={githubUrl}>GitHub</a>. I have{" "}
-        {data.public_repos} repositories that consist of personal, group,
-        assignments, and lessons that I have done from the start of my developer
-        journey.
-      </p>
     </div>
   );
 };

@@ -51,4 +51,21 @@
     rounded-full 
     hover:font-semibold;
   }
+
+  .resume-project-section-header {
+    @apply text-2xl 
+    font-semibold 
+    sm:text-xl 
+    md:text-3xl 
+    lg:text-2xl 
+    mb-4;
+  }
+
+  .form-input {
+    @apply border-black 
+    bg-[#e8e6e6] 
+    border-b-2 
+    outline-none  
+    appearance-none
+  }
 }

@@ -40,7 +40,7 @@ const Home = ({ title }) => {
           </li>
           <li>
             <a href="https://docs.google.com/document/d/14taZmzSKYwsTdVMHeAdPs3aSg9U5ZA94pt1s56VxX8g/edit?usp=sharing" target="_blank">
-              <i className="fa-solid fa-file-pdf fa-2xl hover:opacity-50" />
+              <i className="fa-solid fa-file-lines fa-2xl hover:opacity-50" />
             </a>
           </li>
         </ul>

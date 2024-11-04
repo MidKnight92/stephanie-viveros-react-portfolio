@@ -16,7 +16,7 @@ export const email = "stephanie.viveros.dev@gmail.com";
 export const location = "Chicago, IL";
 
 export const resume = {
-  Expierence: [
+  experience: [
     {
       title: "Associate Consultant",
       company: "Capgemini",
@@ -46,87 +46,87 @@ export const resume = {
       description: "",
     },
   ],
-  Education: {
+  education: {
     title: "Bachelor Arts - Business, Entrepreneurship",
     facility: "Purdue University - Calumet",
     location: "Hammond, IN",
     duration: "2010 - 2014",
   },
-  Certifications: [
+  certifications: [
     {
       title: "Software Engineering Immersive",
-      company: "General Assembly",
-      duration: "2019",
+      issuer: "General Assembly",
+      year: "2019",
     },
     {
       title: "CS50's Introduction to Computer Science",
-      company: "edX",
-      duration: "2020",
+      issuer: "edX",
+      year: "2020",
     },
     {
       title: "Oracle Certified Associate, Java SE 8 Programmer",
-      company: "Oracle",
-      duration: "2021",
+      issuer: "Oracle",
+      year: "2021",
     },
     {
       title: "TypeScript Essential Training",
-      company: "LinkedIn Learning",
-      duration: "2021",
+      issuer: "LinkedIn Learning",
+      year: "2021",
     },
-    {
+      {
       title: "Learning Jira Software",
-      company: "LinkedIn Learning",
-      duration: "2020",
+      issuer: "LinkedIn Learning",
+      year: "2021",
     },
     {
       title: "Postman Essential Training",
-      company: "LinkedIn Learning",
-      duration: "2021",
+      issuer: "LinkedIn Learning",
+      year: "2021",
     },
     {
       title: "React Basics",
-      company: "Coursera",
-      duration: "2024",
+      issuer: "Coursera",
+      year: "2024",
     },
     {
       title: "Angular - The Complete Guide (2024 Edition)",
-      company: "Udemy",
-      duration: "2024 - Exp. 2025",
+      issuer: "Udemy",
+      year: "2024 - Exp. 2025",
     },
     {
       title: "Angular (Basic) Certificate",
-      company: "HackerRank",
-      duration: "2024",
+      issuer: "HackerRank",
+      year: "2024",
     },
     {
       title: "Angular (Intermediate) Certificate",
-      company: "HackerRank",
-      duration: "2024",
+      issuer: "HackerRank",
+      year: "2024",
     },
     {
       title: "React Essential Training Certificate",
-      company: "LinkedIn Learning",
-      duration: "2024",
+      issuer: "LinkedIn Learning",
+      year: "2024",
     },
     {
       title: "React Hooks",
-      company: "LinkedIn Learning",
-      duration: "2024",
+      issuer: "LinkedIn Learning",
+      year: "2024",
     },
     {
       title: "React: State Management",
-      company: "LinkedIn Learning",
-      duration: "2024",
+      issuer: "LinkedIn Learning",
+      year: "2024",
     },
     {
       title: "React: Using TypeScript",
-      company: "LinkedIn Learning",
-      duration: "2024",
+      issuer: "LinkedIn Learning",
+      year: "2024",
     },
     {
       title: "React.js: Essential",
-      company: "LinkedIn Learning",
-      duration: "2024",
+      issuer: "LinkedIn Learning",
+      year: "2024",
     },
   ],
 };

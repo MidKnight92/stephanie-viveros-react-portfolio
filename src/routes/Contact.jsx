@@ -70,7 +70,7 @@ const Contact = ({ title }) => {
         {/* <label className="block"> */}
           {/* <span className="block">Name</span> */}
           <input
-            className="border-black border-b-2 outline-none bg-[#e8e6e6] appearance-none"
+            className="form-input"
             onChange={handleChange}
             name="name"
             type="text"
@@ -84,12 +84,12 @@ const Contact = ({ title }) => {
         {/* <label className="block"> */}
           {/* <span className="block">Email</span> */}
           <input
-            className="border-black border-b-2 outline-none bg-[#e8e6e6] appearance-none"
+            className="form-input"
             onChange={handleChange}
             name="email"
             type="email"
             value={formData.email}
-            placeholder="E-mail"
+            placeholder="Email"
             required
           />{" "}
         {/* </label> */}
@@ -98,7 +98,7 @@ const Contact = ({ title }) => {
         {/* <label className="block"> */}
           {/* <span className="hidden">Message</span> */}
           <textarea
-            className="border-black bg-[#e8e6e6] border-b-2 outline-none  appearance-none"
+            className="form-input"
             onChange={handleChange}
             name="message"
             value={formData.message}

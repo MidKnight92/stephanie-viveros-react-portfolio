@@ -1,66 +1,88 @@
 import useDocumentTitle from "../useDocumentTitle";
 import { resume } from "../constants";
 
-
-const expierence = resume.Expierence.map(
-  ({ title, company, description, duration, location }) => (
-    <div className="mb-6">
-      <h3 className="text-lg md:text-lg font-medium">
-        {title} /
-        <span className="font-light"> {company}</span>
-      </h3>
-      <p className="text-gray-600 sm:text-sm md:text-sm lg:text-sm">{location}</p>
-      <p className="text-gray-600 text-sm sm:text-xs">{duration}</p>
+const Item = ({
+  title,
+  subtitle,
+  duration,
+  location,
+  facility,
+  description,
+}) => (
+  <div className="mb-4 text-right">
+    <h3 className="text-lg md:text-lg font-medium">
+      {title} /<span className="font-light"> {subtitle}</span>
+    </h3>
+    {location && (
+      <p className="text-gray-600 sm:text-sm md:text-sm lg:text-sm">
+        {location}
+      </p>
+    )}
+    {facility && <p className="text-gray-600 text-sm font-light">{facility}</p>}
+    {duration && <p className="text-gray-600 text-sm sm:text-xs">{duration}</p>}
+    {description && (
       <p className="text-base md:text-lg leading-relaxed">{description}</p>
-    </div>
+    )}
+  </div>
+);
+
+const experience = resume.experience.map(
+  ({ title, company, description, duration, location }) => (
+    <Item
+      key={`${title}-${company}`}
+      title={title}
+      subtitle={company}
+      duration={duration}
+      location={location}
+      description={description}
+    />
   )
 );
 
-const certifications = resume.Certifications.map(
-  ({ title, company, duration }) => (
-    <div className="mb-6">
-      <h3 className="text-lg md:text-lg font-medium">
-        {title} /
-        <span className="font-light"> {company}</span>
-      </h3>
-      <p className="text-gray-600 text-sm sm:text-xs">{duration}</p>
-    </div>
-  )
+const certifications = resume.certifications.map(({ title, issuer, year }) => (
+  <Item
+    key={`${title}-${issuer}`}
+    title={title}
+    subtitle={issuer}
+    duration={year}
+  />
+));
+
+const education = (
+  <Item
+    key={`${resume.education.title}-${resume.education.facility}`}
+    title={resume.education.title}
+    location={resume.education.location}
+    subtitle={resume.education.facility}
+    duration={resume.education.duration}
+  />
 );
 
 const Resume = ({ title }) => {
   useDocumentTitle({ title });
   return (
-    <div className="main-content text-center">
-      <h1>Resume</h1>
-      <section className="my-8">
-        <h2 className="text-2xl font-semibold sm:text-xl md:text-3xl lg:text-2xl mb-4">
-          Experience
-        </h2>
-        {expierence}
-      </section>
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold sm:text-xl md:text-3xl lg:text-2xl mb-4">
-          Education
-        </h2>
-        <div className="mb-6">
-          <h3 className="text-lg md:text-lg font-medium">{resume.Education.title}</h3>
-          <p className="text-gray-600 text-sm font-light">{resume.Education.facility}</p>
-          <p className="text-gray-600 text-sm sm:text-xs">{resume.Education.duration}</p>
-        </div>
-      </section>
+    <div className="main-content">
+      <h1 className="text-center mb-10">Resume</h1>
       <section>
-        <h2 className="text-2xl font-semibold sm:text-xl md:text-3xl lg:text-2xl mb-4">
-          Certifications
+        <h2 className="-mb-8 resume-project-section-header">
+          <span className="overline">Ex</span>perience
+        </h2>
+        {experience}
+      </section>
+      <section className="mt-10">
+        <h2 className="-mb-8 resume-project-section-header">
+          <span className="overline">Ed</span>ucation
+        </h2>
+        <div className="mb-6">{education}</div>
+      </section>
+      <section className="mt-8">
+        <h2 className="-mb-8 resume-project-section-header">
+          <span className="overline">Ce</span>rtifications
         </h2>
         {certifications}
       </section>
-      <div>
-        <a
-          className="btn"
-        >
-          Download Resume
-        </a>
+      <div className="my-6">
+        <a className="btn block mx-auto w-min text-center">Download Resume</a>
       </div>
     </div>
   );
