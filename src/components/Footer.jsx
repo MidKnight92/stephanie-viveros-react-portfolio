@@ -1,5 +1,28 @@
 import { Link } from "react-router-dom";
-import { githubUrl, linkedinUrl, phoneNumber } from "../constants";
+import {
+  nav,
+  contactInfo,
+} from "../constants";
+
+const siteMap = nav.map(({ path, label }) => (
+  <Link key={`footer-${label}`} className="footer-link" to={path}>
+    {label}
+  </Link>
+));
+
+const contact = contactInfo.map((info) => {
+  const [key, value] = Object.entries(info)[0];
+  return (
+    <a
+      key={key}
+      aria-label={`${key} ${value}`}
+      className="footer-link"
+      href={value}
+    >
+      {key}
+    </a>
+  );
+});
 
 const Footer = () => {
   return (
@@ -10,44 +33,12 @@ const Footer = () => {
       <section className="flex justify-center gap-x-40 text-center">
         <div>
           <label className="block">Contact</label>
-          <a
-            className="footer-link"
-            href="mailto:stephanie.viveros.dev@gmail.com"
-          >
-            Email
-          </a>
-          <a className="footer-link" href={linkedinUrl}>
-            LinkedIn
-          </a>
-          <a className="footer-link" href={githubUrl}>
-            GitHub
-          </a>
-          <a
-            className="footer-link"
-            aria-label={`Phone number: ${phoneNumber}`}
-            href={phoneNumber}
-          >
-            Phone
-          </a>
+          {contact}
         </div>
 
         <div className="">
           <label className="block">Pages</label>
-          <Link className="footer-link" to="/home">
-            Home
-          </Link>{" "}
-          <Link className="footer-link" to="/about">
-            About
-          </Link>{" "}
-          <Link className="footer-link" to="/resume">
-            Resume
-          </Link>{" "}
-          <Link className="footer-link" to="/projects">
-            Projects
-          </Link>{" "}
-          <Link className="footer-link" to="/contact">
-            Contact
-          </Link>
+          {siteMap}
         </div>
       </section>
 
@@ -75,8 +66,8 @@ const Footer = () => {
             reserved.
           </p>
           <p className="text-sm sm:text-xs">
-            Site built by Stephanie Viveros using React, React Router, Vite, Font Awesome,
-            Tailwind CSS, & JavaScript.
+            Site built by Stephanie Viveros using React, React Router, Vite,
+            Font Awesome, Tailwind CSS, & JavaScript.
           </p>
         </div>
       </section>

@@ -1,24 +1,20 @@
 import { Link } from "react-router-dom";
+import { nav } from "../constants";
 
 const Nav = () => {
   return (
     <nav className="mt-5">
       <ul className="flex flex-row text-center">
-        <li className="grow nav">
-          <Link to="/home">Home</Link>
-        </li>
-        <li className="grow nav">
-          <Link to="/about">About</Link>
-        </li>
-        <li className="grow nav">
-          <Link to="/resume">Resume</Link>
-        </li>
-        <li className="grow nav">
-          <Link to="/projects">Projects</Link>
-        </li>
-        <li className="grow nav">
-          <Link to="/contact">Contact</Link>
-        </li>
+        {nav.map(({ path, label }) => (
+          <li key={label} className="grow nav">
+            <Link
+              to={path}
+              className="sm:text-base md:text-lg lg:text-lg xl:text-lg"
+            >
+              {label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

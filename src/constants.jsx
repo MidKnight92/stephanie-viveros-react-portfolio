@@ -10,10 +10,25 @@ export const documentTitle = {
 
 export const githubAPIUrl = "https://api.github.com/users/midKnight92";
 export const githubUrl = "https://api.github.com/midKnight92";
-export const linkedinUrl = "https://www.linkedin.com/in/stephanie-viveros/";
-export const phoneNumber = "te:+13128833708";
+const linkedinUrl = "https://www.linkedin.com/in/stephanie-viveros/";
+const phoneNumber = "te:+13128833708";
 export const email = "stephanie.viveros.dev@gmail.com";
 export const location = "Chicago, IL";
+
+export const contactInfo = [
+  {Email: `mailto:${email}`},
+  {LinkedIn: linkedinUrl},
+  {Github: githubUrl},
+  {Phone: phoneNumber}
+]
+
+export const nav = [
+  {path: '/home', label: "Home"},
+  {path: "/about", label: "About"},
+  {path: "/resume", label: "Resume"},
+  {path: "/projects", label: "Projects"},
+  {path: "/contact", label: "Contact"}
+]
 
 export const resume = {
   experience: [
@@ -130,3 +145,10 @@ export const resume = {
     },
   ],
 };
+
+export const srcPaths = [
+  "MZFUJL42RWo?si=1c4MR37_2yo_embn",
+  "TtKHPUt4Yxs?si=jr8Gpfj4iQ_VN7Po",
+  "qJHvN7Vcmso?si=upxwYl8QY2Xw9Fkm",
+  "DJ84-YiamUc?si=W1tUbMjOzIXi63X3",
+];

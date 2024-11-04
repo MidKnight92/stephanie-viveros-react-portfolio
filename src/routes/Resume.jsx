@@ -21,7 +21,7 @@ const Item = ({
     {facility && <p className="text-gray-600 text-sm font-light">{facility}</p>}
     {duration && <p className="text-gray-600 text-sm sm:text-xs">{duration}</p>}
     {description && (
-      <p className=" visible text-base md:text-lg leading-relaxed">{description}</p>
+      <p className="text-base md:text-lg leading-relaxed">{description}</p>
     )}
   </div>
 );
@@ -82,7 +82,7 @@ const Resume = ({ title }) => {
         {certifications}
       </section>
       <div className="my-6">
-        <a className="btn block mx-auto w-min text-center">Download Resume</a>
+        <a className="btn block mx-auto w-min text-center" href="https://docs.google.com/document/d/14taZmzSKYwsTdVMHeAdPs3aSg9U5ZA94pt1s56VxX8g/edit?usp=sharing" target="_blank">Download Resume</a>
       </div>
     </div>
   );

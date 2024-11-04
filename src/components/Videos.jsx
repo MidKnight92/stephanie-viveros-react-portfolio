@@ -1,9 +1,4 @@
-const srcPaths = [
-  "MZFUJL42RWo?si=1c4MR37_2yo_embn",
-  "TtKHPUt4Yxs?si=jr8Gpfj4iQ_VN7Po",
-  "qJHvN7Vcmso?si=upxwYl8QY2Xw9Fkm",
-  "DJ84-YiamUc?si=W1tUbMjOzIXi63X3",
-];
+import { srcPaths } from "../constants";
 
 const Videos = () => {
   return srcPaths.map((path, i) => (

@@ -3,7 +3,7 @@ import useDocumentTitle from "../useDocumentTitle";
 const Home = ({ title }) => {
   useDocumentTitle({ title });
   return (
-    <div className="main-content flex">
+    <div className="main-content flex"> {/*flex-wrap*/}
       <img
         className="rounded-lg max-h-80"
         src="./../../public/images/stephanie-viveros-headshot.jpg"
