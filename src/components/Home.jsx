@@ -3,31 +3,33 @@ import useDocumentTitle from "../useDocumentTitle";
 const Home = ({ title }) => {
   useDocumentTitle({ title });
   return (
-    <div className="main-content flex"> {/*flex-wrap*/}
-      <img
-        className="rounded-lg max-h-80"
-        src="./../../public/images/stephanie-viveros-headshot.jpg"
-        alt="Stephanie Viveros headshot"
-      />
-      <div>
-        <h1 className="ml-20">
-          Hello, I'm Stephanie!
-        </h1>
-        <h2 className="ml-20 text-4xl mt-10 text-gray-600">
-          I am a full-stack Software Engineer.
-        </h2>
-        <p className="text-2xl ml-20 mt-10">
-          I'm passionate about the amazing ways technology can enhance our
-          lives. I love crafting user-friendly apps that not only look great but
-          also make a positive difference every day.
-        </p>
-        <p className="italic font-light text-xl ml-20 mt-10">
-          Let's Build Something Great!
-        </p>
-        <ul className="flex flex-row gap-10 justify-evenly mt-20">
+    <div className="flex-grow md:main-content">
+      <section className="mx-auto mt-10 lg:flex">
+        <img
+          className="mx-auto max-h-40 rounded-2xl md:ml-20 lg:rounded-lg md:mt-20 md:max-h-96"
+          src="./../../public/images/stephanie-viveros-headshot.jpg"
+          alt="Stephanie Viveros headshot"
+        />
+        <div className="mx-4 text-center">
+          <h1 className="mt-5 md:mt-0 md:ml-20">Hello, I'm Stephanie!</h1>
+          <h2 className="mt-5 md:ml-20 md:mt-10 text-gray-600 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+            I am a full-stack Software Engineer.
+          </h2>
+          <p className="mt-5 md:ml-20 md:text-xl lg:text-2xl md:mt-10">
+            I'm passionate about the amazing ways technology can enhance our
+            lives. I love crafting user-friendly apps that not only look great
+            but also make a positive difference every day.
+          </p>
+          <p className="italic font-light md:ml-20 mt-5 md:mt-10">
+            Let's Build Something Great!
+          </p>
+        </div>
+      </section>
+      <section>
+        <ul className="flex flex-row gap-10 justify-evenly mt-10 md:mt-20">
           <li>
             <a target="_blank" href="https://github.com/MidKnight92">
-              <i className="fa-brands fa-github fa-2xl hover:opacity-50 active:opacity-100" />
+              <i className="fa-brands fa-github fa-xl md:fa-2xl hover:opacity-50 active:opacity-100" />
             </a>
           </li>
           <li>
@@ -35,16 +37,19 @@ const Home = ({ title }) => {
               target="_blank"
               href="https://www.linkedin.com/in/stephanie-viveros/"
             >
-              <i className="fa-brands fa-linkedin fa-2xl hover:opacity-50 active:opacity-100" />
+              <i className="fa-brands fa-linkedin fa-xl md:fa-2xl hover:opacity-50 active:opacity-100" />
             </a>
           </li>
           <li>
-            <a href="https://docs.google.com/document/d/14taZmzSKYwsTdVMHeAdPs3aSg9U5ZA94pt1s56VxX8g/edit?usp=sharing" target="_blank">
-              <i className="fa-solid fa-file-lines fa-2xl hover:opacity-50 active:opacity-100" />
+            <a
+              href="https://docs.google.com/document/d/14taZmzSKYwsTdVMHeAdPs3aSg9U5ZA94pt1s56VxX8g/edit?usp=sharing"
+              target="_blank"
+            >
+              <i className="fa-solid fa-file-lines fa-xl md:fa-2xl hover:opacity-50 active:opacity-100" />
             </a>
           </li>
         </ul>
-      </div>
+      </section>
     </div>
   );
 };
@@ -57,10 +62,7 @@ export default Home;
 // 	•	Desktop (lg): text-6xl
 // 	•	Large Desktop (xl): text-7xl
 // 	•	Subtitle:
-// 	•	Mobile: text-xl
-// 	•	Tablet: text-2xl
-// 	•	Desktop: text-3xl
-// 	•	Large Desktop: text-4xl
+//
 // 	•	Body Text:
 
 // 	•	Button Text:
