@@ -10,7 +10,7 @@
         lg:text-6xl 
         xl:text-7xl 
         md:text-5xl 
-        sm:text-4xl;
+        text-4xl;
   }
 
   p {

@@ -4,39 +4,26 @@ const About = ({ title }) => {
   useDocumentTitle({ title });
   return (
     <div className="md:main-content text-center md:text-pretty">
-      <h1 className="">
-        About Me
-      </h1>
-      <div className="items-center">
-        <div className="font-body">
-          <p>
-            Hi! I’m Stephanie Viveros, a full-stack web developer based in
-            Chicago. I have over 3 years of experience in the financial sector
-            and was formerly an Associate Consultant, primarly as a software
-            developer. Before that, I graduated from the Software Engineering
-            Immersive program at General Assembly, where I learned the
-            fundamentals of web development in a hands-on, full-time coding
-            bootcamp.
-          </p>
-          <p>
-            After graduation, I continued to grow my skills by completing
-            professional courses, including earning my Oracle Certified
-            Associate certification in Java 8. Before transitioning into tech, I
-            received a B.A. in Entrepreneurship from Purdue University Calumet
-            and gained valuable experience in the retail industry, where I
-            developed strong problem-solving and customer service skills.
-          </p>
-          <p>
-            I’m passionate about the power of technology and believe it has made
-            our world a better place. That’s why I constantly strive to learn
-            and improve every day. I love creating beautiful, functional apps
-            and take pride in my work.
-          </p>
-          <p>
-            When I’m not coding, I’m a dog mom, coffee lover, book enthusiast,
-            nature explorer, and a big fan of Chicago sports — except the Cubs!
-          </p>
-        </div>
+      <h1 className="">About Me</h1>
+      <div className="items-center m-10">
+        <p className="m-2">
+          Hello again! Here’s a bit more about my background. I've had the
+          privilege of working with a couple of the top companies in the
+          financial industry, but my journey into tech actually began closer to
+          home. When my family and I started our own business, I decided to
+          build our website, which sparked my passion for coding. That led me to
+          a full-time coding boot camp at General Assembly, where I learned the
+          foundations of web development. Since then, I’ve expanded my skills
+          with numerous courses like Harvard’s CS50 Introduction to Computer Science and earned my Oracle Java 8
+          programming certification.
+        </p>
+        <p className="m-2">
+          I love creating and designing websites that are both visually engaging
+          and user-friendly. I’m passionate about technology and truly believe
+          in the positive impact it has on our world. When I’m not coding, you
+          can find me out on Chicago's lakefront or enjoying nature with my dog,
+          Gatsby.
+        </p>
       </div>
     </div>
   );
