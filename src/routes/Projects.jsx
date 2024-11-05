@@ -10,25 +10,30 @@ const Projects = ({ title }) => {
   const [displayOlderProjects, setDisplayOlderProjects] = useState(false);
   const data = useGithubData();
   useDocumentTitle({ title });
-  const isInDevelopmentMode = true;
+  const isInDevelopmentMode = false;
 
   const handleClick = () => {
     setDisplayOlderProjects(!displayOlderProjects);
   };
   return (
-    <div className="md:main-content text-center">
+    <div className="mt-4 md:main-content text-center p-10 md:p-0">
       <h1>Projects</h1>
-      <p>
-        This page is under development. I am building out a gallery to showcase
-        projects I have done over the years. In the meantime, please feel free
-        to take a look at my{" "}
+      <p className="mt-10">
+        This page is under development. I am creating a gallery to showcase the
+        projects I have completed over the years, in conjunction with rebuilding
+        my first personal project, Battle-at-Sea. This project is my
+        interpretation of the classic Battleship game, originally created with
+        VanillJs, Node.js, CSS, and HTML. The updated version uses React,
+        TypeScript, Styled Components, and Zustand for global state management. In the meantime, please feel
+        free to take a look at my{" "}
         <a className="text-gray-600 font-bold hover:underline" href={githubUrl}>
           GitHub
         </a>
-        . I have {data.public_repos} repositories that consist of personal,
-        group, assignments, and lessons that I have done from the start of my
+        . I have {data.public_repos} repositories that include personal
+        projects, group work, assignments, and lessons from the beginning of my
         software engineering journey. Thank you for your understanding.
       </p>
+      <i className="fa-solid fa-gear fa-xl md:fa-2xl fa-spin-pulse my-8"></i>
       {isInDevelopmentMode && (
         <>
           <section>

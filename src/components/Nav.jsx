@@ -14,7 +14,7 @@ const links = nav.map(({ path, label }) => (
 
 const Nav = () => {
   return (
-    <nav className="py-5 md:mt-5 bg-black md:bg-transparent lg:bg-transparent xl:bg-transparent">
+    <nav className="sticky top-0 py-5 md:static md:mt-5 bg-black md:bg-transparent lg:bg-transparent xl:bg-transparent">
       <ul className="flex flex-row text-center divide-x-2 divide-gray-600 md:divide-x-0 lg:divide-x-0 xl:divide-x-0">
         {links}
       </ul>

@@ -61,7 +61,7 @@ const education = (
 const Resume = ({ title }) => {
   useDocumentTitle({ title });
   return (
-    <div className="md:main-content">
+    <div className="mt-10 md:main-content">
       <h1 className="text-center mb-10">Resume</h1>
       <section>
         <h2 className="md:-mb-8 resume-project-section-header">

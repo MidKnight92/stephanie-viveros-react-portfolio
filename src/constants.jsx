@@ -143,6 +143,11 @@ export const resume = {
       issuer: "LinkedIn Learning",
       year: "2024",
     },
+    {
+      title: "Tailwind CSS Essential Training",
+      issuer: "LinkedIn Learning",
+      year: "2024",
+    },
   ],
 };
 

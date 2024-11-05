@@ -7,7 +7,7 @@ const Home = ({ title }) => {
       <section className="mx-auto mt-10 lg:flex">
         <img
           className="mx-auto max-h-40 rounded-2xl md:ml-20 lg:rounded-lg md:mt-20 md:max-h-96"
-          src="./../../public/images/me-charcoal-gray-bg.png"
+          src="./../../images/me-charcoal-gray-bg.png"
           alt="Stephanie Viveros headshot"
         />
         <div className="mx-4 text-center">
@@ -16,9 +16,9 @@ const Home = ({ title }) => {
             I am a full-stack Software Engineer.
           </h2>
           <p className="mt-5 md:ml-20 md:text-xl lg:text-2xl md:mt-10">
-            I'm passionate about the amazing ways technology can enhance our
-            lives. I love crafting user-friendly apps that not only look great
-            but also make a positive difference every day.
+            I'm passionate about the amazing ways technology can improve our
+            lives. I love building user-friendly apps that not only look great
+            but also make a positive difference.
           </p>
           <p className="italic font-light md:ml-20 mt-5 md:mt-10">
             Let's Build Something Great!
