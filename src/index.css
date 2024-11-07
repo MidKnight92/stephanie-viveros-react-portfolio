@@ -42,6 +42,8 @@
         xl:text-lg
         /* hover:underline; */
         hover:font-extrabold
+        active:text-gray-600
+        active:text-base
   }
 
   .btn {

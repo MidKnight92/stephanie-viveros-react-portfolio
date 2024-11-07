@@ -26,11 +26,11 @@ const contact = contactInfo.map((info) => {
 
 const Footer = () => {
   return (
-    <footer className="sticky bottom-auto text-center text-sm sm:text-xs">
-      <div className="m-10">
+    <footer className="absolute inset-x-0 bottom-0 text-center text-sm sm:text-xs">
+      {/* <div className="m-10">
         <i className="fas fa-code" />
-      </div>
-      <section className="hidden md:hidden-none md:flex justify-center gap-x-40 text-center">
+      </div> */}
+      {/* <section className="hidden md:flex justify-center gap-x-40 text-center">
         <div>
           <label className="block">Contact</label>
           {contact}
@@ -40,7 +40,7 @@ const Footer = () => {
           <label className="block">Pages</label>
           {siteMap}
         </div>
-      </section>
+      </section> */}
 
       <section className="mt-10">
         <div>
