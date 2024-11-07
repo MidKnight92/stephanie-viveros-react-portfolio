@@ -6,23 +6,31 @@ const About = ({ title }) => {
     <div className="mt-10 md:main-content text-center md:text-pretty">
       <h1 className="">About Me</h1>
       <div className="items-center m-10">
-        <p className="m-2">
-          Hello again! Here’s a bit more about my background. I've had the
-          privilege of working with a couple of the top companies in the
-          financial industry, but my journey into tech actually began closer to
-          home. When my family and I started our own business, I decided to
-          build our website, which sparked my passion for coding. That led me to
-          a full-time coding boot camp at General Assembly, where I learned the
-          foundations of web development. Since then, I’ve expanded my skills
-          with numerous courses like Harvard’s CS50 Introduction to Computer Science and earned my Oracle Java 8
-          programming certification.
+        <p className="mt-2">
+          Hello again! I’m a full-stack developer with experience in Angular,
+          TypeScript, NestJS, Java, and Spring Boot. My journey into tech
+          started in an unexpected place—when my family and I launched our own
+          business. I took on the challenge of building our website with no
+          prior coding experience, and that experience sparked my passion for
+          technology. It led me to complete a full-time coding boot camp where I
+          developed a solid foundation in web development.
         </p>
-        <p className="m-2">
-          I love creating and designing websites that are both visually engaging
-          and user-friendly. I’m passionate about technology and truly believe
-          in the positive impact it has on our world. When I’m not coding, you
-          can find me out on Chicago's lakefront or enjoying nature with my dog,
-          Gatsby.
+
+        <p className="mt-2">
+          Since then, I’ve been committed to expanding my skills, completing
+          courses like Harvard’s CS50 Introduction to Computer Science and
+          earning my Oracle Java 8 Programming certification. In addition to my
+          technical skills, my retail and entrepreneurial background has
+          strengthened my communication, problem-solving, and time management
+          skills, as well as my ability to be resourceful and thrive in high-pressure environments.
+        </p>
+
+        <p className="mt-2">
+          I love creating websites that are both visually engaging and
+          user-friendly. Technology excites me because of its power to make a
+          positive impact, and I’m always eager to learn and take on new
+          challenges. When I’m not coding, you’ll probably find me walking along
+          Chicago’s lakefront or enjoying nature with my dog, Gatsby.
         </p>
       </div>
     </div>

@@ -26,7 +26,7 @@ const Home = ({ title }) => {
         </div>
       </section>
       <section>
-        <ul className="flex flex-row gap-10 justify-evenly mt-10 md:mt-20">
+        <ul className="flex flex-row gap-10 justify-evenly mt-10 md:hidden">
           <li>
             <a target="_blank" href="https://github.com/MidKnight92">
               <i className="fa-brands fa-github fa-xl md:fa-2xl hover:opacity-50 active:opacity-100" />

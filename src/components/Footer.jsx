@@ -26,7 +26,7 @@ const contact = contactInfo.map((info) => {
 
 const Footer = () => {
   return (
-    <footer className="sticky inset-x-0 bottom-auto text-center text-sm sm:text-xs">
+    <footer className="sticky bottom-auto text-center text-sm sm:text-xs">
       <div className="m-10">
         <i className="fas fa-code" />
       </div>

@@ -26,21 +26,22 @@
         hover:underline;
   }
 
-  .main-content {
+  /* .main-content {
     @apply outline 
         outline-offset-4 
         outline-4 
         mt-20 
         mx-20  
         p-10;
-  }
+  } */
 
   .nav {
     @apply sm:text-base 
         md:text-lg 
         lg:text-lg
         xl:text-lg
-        hover:underline;
+        /* hover:underline; */
+        hover:font-extrabold
   }
 
   .btn {

@@ -23,7 +23,6 @@ export const contactInfo = [
 ]
 
 export const nav = [
-  {path: '/home', label: "Home"},
   {path: "/about", label: "About"},
   {path: "/resume", label: "Resume"},
   {path: "/projects", label: "Projects"},
