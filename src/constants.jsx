@@ -23,10 +23,17 @@ export const contactInfo = [
 ]
 
 export const nav = [
+  {path: "/home", label: "Home"},
   {path: "/about", label: "About"},
   {path: "/resume", label: "Resume"},
   {path: "/projects", label: "Projects"},
   {path: "/contact", label: "Contact"}
+]
+
+export const iconInfo = [
+  {icon: 'fa-brands fa-github', url: "https://github.com/MidKnight92"},
+  {icon: 'fa-brands fa-linkedin', url: "https://www.linkedin.com/in/stephanie-viveros/"},
+  {icon: 'fa-solid fa-file-lines', url: "https://docs.google.com/document/d/14taZmzSKYwsTdVMHeAdPs3aSg9U5ZA94pt1s56VxX8g/edit?usp=sharing"}
 ]
 
 export const resume = {

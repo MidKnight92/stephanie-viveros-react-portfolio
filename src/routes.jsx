@@ -3,9 +3,9 @@ import Contact from "./routes/Contact";
 import Projects from "./routes/Projects";
 import Resume from "./routes/Resume";
 import About from "./routes/About";
-import Home from "./components/Home";
+import Home from "./pages/Home";
 import { documentTitle } from "./constants";
-import NotFound from "./components/NotFound";
+import NotFound from "./pages/NotFound";
 import App from "./App";
 
 const routes = [
