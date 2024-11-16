@@ -26,7 +26,7 @@ const contact = contactInfo.map((info) => {
 
 const Footer = () => {
   return (
-    <footer className="absolute inset-x-0 bottom-0 text-center text-sm sm:text-xs">
+    <footer className="text-[#e8e6e6] absolute inset-x-0 bottom-0 text-center text-sm sm:text-xs">
       {/* <div className="m-10">
         <i className="fas fa-code" />
       </div> */}
@@ -65,10 +65,6 @@ const Footer = () => {
             © {new Date().getFullYear()} Stephanie Viveros | All rights
             reserved.
           </p>
-          {/* <p className="text-sm sm:text-xs">
-            Site built by Stephanie Viveros using React, React Router, Vite,
-            Font Awesome, Tailwind CSS, & JavaScript.
-          </p> */}
         </div>
       </section>
     </footer>

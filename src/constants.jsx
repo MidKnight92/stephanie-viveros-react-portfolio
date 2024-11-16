@@ -154,6 +154,11 @@ export const resume = {
       issuer: "LinkedIn Learning",
       year: "2024",
     },
+    {
+      title: "React: Design Patterns",
+      issuer: "LinkedIn Learning",
+      year: "2024",
+    },
   ],
 };
 

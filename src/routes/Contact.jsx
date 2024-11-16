@@ -67,8 +67,8 @@ const Contact = ({ title }) => {
     >
       <input type="hidden" name="form-name" value="contact" />
       <p className="my-2">
-        {/* <label className="block"> */}
-          {/* <span className="block">Name</span> */}
+        <label for="name" >
+          <span className="hidden">Name</span>
           <input
             className="form-input"
             onChange={handleChange}
@@ -78,11 +78,11 @@ const Contact = ({ title }) => {
             value={formData.name}
             required
           />
-        {/* </label> */}
+        </label>
       </p>
       <p className="my-5">
-        {/* <label className="block"> */}
-          {/* <span className="block">Email</span> */}
+        <label for="email">
+          <span className="hidden">Email</span>
           <input
             className="form-input"
             onChange={handleChange}
@@ -91,12 +91,12 @@ const Contact = ({ title }) => {
             value={formData.email}
             placeholder="Email"
             required
-          />{" "}
-        {/* </label> */}
+          />
+        </label>
       </p>
       <p className="my-5">
-        {/* <label className="block"> */}
-          {/* <span className="hidden">Message</span> */}
+        <label for="message">
+         <span className="hidden">Message</span>
           <textarea
             className="form-input"
             onChange={handleChange}
@@ -105,8 +105,8 @@ const Contact = ({ title }) => {
             maxLength="500"
             placeholder="Message"
             required
-          ></textarea>{" "}
-        {/* </label> */}
+          ></textarea>
+        </label>
       </p>
       <p className="my-5">
         <button
@@ -120,13 +120,13 @@ const Contact = ({ title }) => {
   );
 
   const contact = (
-    <div>
+    <address>
       <h2 className="text-2xl font-semibold sm:text-xl md:text-3xl lg:text-2xl mt-1">Contact</h2>
       <p className="text-gray-600 my-1">{email}</p>
       <p className="text-gray-600">312.883.3708</p>
       <h2 className="text-2xl font-semibold sm:text-xl md:text-3xl lg:text-2xl mt-8">Based in</h2>
       <p className="text-gray-600 my-1">{location}</p>
-    </div>
+    </address>
   );
 
   const thankYouMessage =

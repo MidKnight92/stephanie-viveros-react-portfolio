@@ -8,8 +8,8 @@ const About = ({ title }) => {
       <div className="m-10">
         <img
           className="max-h-40 rounded-2xl float-left m-3 lg:rounded-lg md:max-h-96"
-          src="./../../images/me&G.jpeg"
-          alt="Stephanie Viveros and Gatsby (dog)"
+          src="./../../images/me-and-Gatsby.jpg"
+          alt="Stephanie Viveros and her dog - Gatsby."
         />
           <p className="mt-2">
             <span className="font-bold">Hello again!</span> I’m a full-stack developer with experience in Angular,

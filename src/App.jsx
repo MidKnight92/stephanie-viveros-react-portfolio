@@ -7,7 +7,7 @@ const App = () => {
     <>
       <Nav />
       <Outlet />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
