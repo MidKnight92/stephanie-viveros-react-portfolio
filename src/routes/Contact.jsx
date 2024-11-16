@@ -2,6 +2,7 @@ import useDocumentTitle from "../useDocumentTitle";
 import { useState } from "react";
 import { Filter } from "bad-words";
 import { email, location } from "../constants";
+import Footer from "../pages/Footer";
 
 const Contact = ({ title }) => {
   useDocumentTitle({ title });
@@ -67,9 +68,10 @@ const Contact = ({ title }) => {
     >
       <input type="hidden" name="form-name" value="contact" />
       <p className="my-2">
-        <label for="name" >
+        <label for="name">
           <span className="hidden">Name</span>
           <input
+            aria-required="true"
             className="form-input"
             onChange={handleChange}
             name="name"
@@ -84,6 +86,7 @@ const Contact = ({ title }) => {
         <label for="email">
           <span className="hidden">Email</span>
           <input
+            aria-required="true"
             className="form-input"
             onChange={handleChange}
             name="email"
@@ -96,8 +99,9 @@ const Contact = ({ title }) => {
       </p>
       <p className="my-5">
         <label for="message">
-         <span className="hidden">Message</span>
+          <span className="hidden">Message</span>
           <textarea
+            aria-required="true"
             className="form-input"
             onChange={handleChange}
             name="message"
@@ -109,10 +113,7 @@ const Contact = ({ title }) => {
         </label>
       </p>
       <p className="my-5">
-        <button
-          className="btn"
-          type="submit"
-        >
+        <button role="submit" aria-label="Send" className="btn" type="submit">
           Send
         </button>
       </p>
@@ -120,11 +121,15 @@ const Contact = ({ title }) => {
   );
 
   const contact = (
-    <address>
-      <h2 className="text-2xl font-semibold sm:text-xl md:text-3xl lg:text-2xl mt-1">Contact</h2>
+    <address className="mt-10">
+      <h2 className="text-2xl font-semibold sm:text-xl md:text-3xl lg:text-2xl mt-1">
+        Contact
+      </h2>
       <p className="text-gray-600 my-1">{email}</p>
       <p className="text-gray-600">312.883.3708</p>
-      <h2 className="text-2xl font-semibold sm:text-xl md:text-3xl lg:text-2xl mt-8">Based in</h2>
+      <h2 className="text-2xl font-semibold sm:text-xl md:text-3xl lg:text-2xl mt-8">
+        Based in
+      </h2>
       <p className="text-gray-600 my-1">{location}</p>
     </address>
   );
@@ -139,13 +144,20 @@ const Contact = ({ title }) => {
     "Your input contains language that is not allowed. Please revise your entry and try again.";
 
   return (
-    <div className="mt-10 md:main-content">
+    <div className="flex-col justify-center mx-2 mt-2 p-2 md:main-content text-pretty">
       <h1 className="text-center">Contact Me</h1>
-      <div className="text-center my-4">{showMessage && <p>{message}</p>}</div>
+      <div className="text-center my-4">
+        {showMessage && (
+          <p aria-errormessage={message} className="max-w-screen">
+            {message}
+          </p>
+        )}
+      </div>
       <div className="md:flex mt-6 md:gap-x-40 justify-center">
         {formBody}
         {contact}
       </div>
+      <Footer />
     </div>
   );
 };

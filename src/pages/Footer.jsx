@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="absolute inset-x-0 text-center text-sm sm:text-xs">
+    <footer className="absolute inset-x-0 bottom-0 text-center text-sm sm:text-xs">
       <section className="mt-10">
         <div>
           <a
