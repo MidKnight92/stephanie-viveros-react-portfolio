@@ -10,6 +10,7 @@ const Home = ({ title }) => {
           "url('../../public/images/me-blue-floral-gray-bg.jpg')",
         textShadow: "2px 2px 4px rgb(0,0,0)",
       }}
+      aria-hidden="true"
     >
       <div className="absolute inset-0 bg-black bg-opacity-25"></div>
       <main className="fixed bottom-10">

@@ -14,6 +14,7 @@ const linkedinUrl = "https://www.linkedin.com/in/stephanie-viveros/";
 const phoneNumber = "te:+13128833708";
 export const email = "stephanie.viveros.dev@gmail.com";
 export const location = "Chicago, IL";
+export const resumeUrl = "https://docs.google.com/document/d/14taZmzSKYwsTdVMHeAdPs3aSg9U5ZA94pt1s56VxX8g/edit?usp=sharing";
 
 export const contactInfo = [
   {Email: `mailto:${email}`},
@@ -31,9 +32,9 @@ export const nav = [
 ]
 
 export const iconInfo = [
-  {icon: 'fa-brands fa-github', url: "https://github.com/MidKnight92"},
-  {icon: 'fa-brands fa-linkedin', url: "https://www.linkedin.com/in/stephanie-viveros/"},
-  {icon: 'fa-solid fa-file-lines', url: "https://docs.google.com/document/d/14taZmzSKYwsTdVMHeAdPs3aSg9U5ZA94pt1s56VxX8g/edit?usp=sharing"}
+  {icon: 'fa-brands fa-github', url: githubAPIUrl},
+  {icon: 'fa-brands fa-linkedin', url: linkedinUrl},
+  {icon: 'fa-solid fa-file-lines', url: resumeUrl}
 ]
 
 export const resume = {

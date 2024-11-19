@@ -1,5 +1,5 @@
 import useDocumentTitle from "../useDocumentTitle";
-import { resume } from "../constants";
+import { resume, resumeUrl } from "../constants";
 
 const Item = ({
   title,
@@ -82,7 +82,7 @@ const Resume = ({ title }) => {
         {certifications}
       </section>
       <div className="my-6">
-        <a className="btn block mx-auto w-min text-center" href="https://docs.google.com/document/d/14taZmzSKYwsTdVMHeAdPs3aSg9U5ZA94pt1s56VxX8g/edit?usp=sharing" target="_blank">Download Resume</a>
+        <a className="btn block mx-auto w-min text-center" href={resumeUrl} target="_blank">Download Resume</a>
       </div>
     </div>
   );
