@@ -61,7 +61,7 @@ const education = (
 const Resume = ({ title }) => {
   useDocumentTitle({ title });
   return (
-    <div className="mt-10 md:main-content">
+    <div className="mt-10 md:absolute md:w-3/4 md:right-0 md:p-6">
       <h1 className="text-center mb-10">Resume</h1>
       <section>
         <h2 className="md:-mb-8 resume-project-section-header">
@@ -82,7 +82,13 @@ const Resume = ({ title }) => {
         {certifications}
       </section>
       <div className="my-6">
-        <a className="btn block mx-auto w-min text-center" href={resumeUrl} target="_blank">Download Resume</a>
+        <a
+          className="btn block mx-auto w-min text-center"
+          href={resumeUrl}
+          target="_blank"
+        >
+          Download Resume
+        </a>
       </div>
     </div>
   );
