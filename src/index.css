@@ -26,24 +26,12 @@
         hover:underline;
   }
 
-  /* .main-content {
-    @apply outline 
-        outline-offset-4 
-        outline-4 
-        mt-20 
-        mx-20  
-        p-10;
-  } */
-
   .nav {
     @apply sm:text-base 
         md:text-lg 
-        lg:text-lg
-        xl:text-lg
-        /* hover:underline; */
         hover:font-extrabold
-        active:text-gray-600
-        active:text-base
+        active:opacity-100 
+        hover:opacity-50;
   }
 
   .btn {
@@ -55,7 +43,7 @@
     hover:font-semibold
     hover:bg-opacity-85
     active:bg-opacity-100
-    active:font-bold
+    active:font-bold;
   }
 
   .resume-project-section-header {
@@ -72,6 +60,6 @@
     bg-[#e8e6e6] 
     border-b-2 
     outline-none  
-    appearance-none
+    appearance-none;
   }
 }

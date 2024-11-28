@@ -1,13 +1,13 @@
 import useDocumentTitle from "../useDocumentTitle";
+import me from "../images/me-blue-floral-gray-big.jpg";
 
 const Home = ({ title }) => {
   useDocumentTitle({ title });
   return (
     <div
-      className="h-screen w-full bg-cover bg-no-repeat bg-center text-white relative overflow-hidden"
+      className="h-screen w-full bg-cover fixed bg-top bg-no-repeat text-white md:w-3/4 md:right-0"
       style={{
-        backgroundImage:
-          "url('../../public/images/me-blue-floral-gray-bg.jpg')",
+        backgroundImage: `url(${me})`,
         textShadow: "2px 2px 4px rgb(0,0,0)",
       }}
       aria-hidden="true"
@@ -15,7 +15,7 @@ const Home = ({ title }) => {
       <div className="absolute inset-0 bg-black bg-opacity-25"></div>
       <main className="fixed bottom-10">
         <section className="flex flex-col p-4">
-          <h1>Hello, I'm Stephanie!</h1> {/* className="md:mt-0 md:ml-20" */}
+          <h1>Hello, I'm Stephanie!</h1>
           <h2 className="text-bolder mt-2 md:ml-20 md:mt-10 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
             I am a full-stack software engineer out of Chicago.
           </h2>

@@ -1,14 +1,15 @@
 import useDocumentTitle from "../useDocumentTitle";
+import meAndGatsby from "../images/me-and-Gatsby.jpg";
 
 const About = ({ title }) => {
   useDocumentTitle({ title });
   return (
-    <div className="lg:w-3/4 mt-4 md:main-content lg:float-right flex flex-wrap md:text-pretty">
+    <div className="md:w-3/4 mt-4 md:main-content md:float-right flex flex-wrap md:text-pretty">
       <h1 className="">About Me</h1>
       <div className="m-10">
         <img
           className="max-h-40 rounded-2xl float-left m-3 lg:rounded-lg md:max-h-96"
-          src="./../../images/me-and-Gatsby.jpg"
+          src={meAndGatsby}
           alt="Stephanie Viveros and her dog - Gatsby."
         />
           <p className="mt-2">
