@@ -16,7 +16,7 @@ const Projects = ({ title }) => {
     setDisplayOlderProjects(!displayOlderProjects);
   };
   return (
-    <div className="mt-4 md:main-content text-center p-10 md:p-0">
+    <div className="mt-4 text-center p-10 md:fixed md:w-3/4 md:right-0">
       <h1>Projects</h1>
       <p className="mt-10">
         This page is under development. I am creating a gallery to showcase the
