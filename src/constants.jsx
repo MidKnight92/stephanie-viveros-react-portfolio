@@ -1,3 +1,6 @@
+import findGatsby from "./images/findGatsby.png";
+import battleAtSea from "./images/battle-at-sea-react.png"
+
 export const documentTitle = {
   home: "Stephanie Viveros | Home",
   about: "Stephanie Viveros | About",
@@ -14,28 +17,44 @@ const linkedinUrl = "https://www.linkedin.com/in/stephanie-viveros/";
 const phoneNumber = "te:+13128833708";
 export const email = "stephanie.viveros.dev@gmail.com";
 export const location = "Chicago, IL";
-export const resumeUrl = "https://docs.google.com/document/d/14taZmzSKYwsTdVMHeAdPs3aSg9U5ZA94pt1s56VxX8g/edit?usp=sharing";
+export const resumeUrl =
+  "https://docs.google.com/document/d/14taZmzSKYwsTdVMHeAdPs3aSg9U5ZA94pt1s56VxX8g/edit?usp=sharing";
 
 export const contactInfo = [
-  {Email: `mailto:${email}`},
-  {LinkedIn: linkedinUrl},
-  {Github: githubUrl},
-  {Phone: phoneNumber}
-]
+  { Email: `mailto:${email}` },
+  { LinkedIn: linkedinUrl },
+  { Github: githubUrl },
+  { Phone: phoneNumber },
+];
+
+export const projects = [
+  {
+    projectName: "Find Gatsby",
+    description: `Find Gatsby is an interactive and playful web application I developed using React and Styled Components. The app challenges users to help me locate my adventurous dog, Gatsby, by flipping cards to uncover his whereabouts and daily activities. It features dynamic animations, responsive design, and intuitive gameplay, providing an engaging user experience. This project showcases my front-end development skills, including state management, responsive styling, and interactive UI design.`,
+    image: findGatsby,
+    url: "https://find-gatsby.netlify.app"
+  },
+  {
+    projectName: "Battle-At-Sea",
+    description: "Battle-At-Sea is my take on the classic multiplayer game, Battlefront, built with React, TypeScript, Zustand, and Styled Components. Currently in development, this project is an upgraded version of my original creation made with JavaScript and Node, showcasing my growth in crafting interactive and dynamic web applications.",
+    image: battleAtSea,
+    url: ""
+  },
+];
 
 export const nav = [
-  {path: "/home", label: "< SV />"},
-  {path: "/about", label: "About"},
-  {path: "/resume", label: "Resume"},
-  {path: "/projects", label: "Projects"},
-  {path: "/contact", label: "Contact"}
-]
+  { path: "/home", label: "< SV />" },
+  { path: "/about", label: "About" },
+  { path: "/resume", label: "Resume" },
+  { path: "/projects", label: "Projects" },
+  { path: "/contact", label: "Contact" },
+];
 
 export const iconInfo = [
-  {icon: 'fa-brands fa-github', url: githubAPIUrl},
-  {icon: 'fa-brands fa-linkedin', url: linkedinUrl},
-  {icon: 'fa-solid fa-file-lines', url: resumeUrl}
-]
+  { icon: "fa-brands fa-github", url: githubAPIUrl },
+  { icon: "fa-brands fa-linkedin", url: linkedinUrl },
+  { icon: "fa-solid fa-file-lines", url: resumeUrl },
+];
 
 export const resume = {
   experience: [
@@ -95,7 +114,7 @@ export const resume = {
       issuer: "LinkedIn Learning",
       year: "2021",
     },
-      {
+    {
       title: "Learning Jira Software",
       issuer: "LinkedIn Learning",
       year: "2021",

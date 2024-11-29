@@ -144,7 +144,7 @@ const Contact = ({ title }) => {
     "Your input contains language that is not allowed. Please revise your entry and try again.";
 
   return (
-    <div className="flex-col justify-center mx-2 mt-20 md:mt-2 p-2 text-pretty md:absolute md:w-3/4 md:right-0 md:p-6 md:flex-none">
+    <div className="flex-col mt-20 md:mt-2 p-2 text-pretty md:fixed md:w-3/4 md:right-0 md:p-6 md:flex-none">
       <h1 className="text-center">Contact Me</h1>
       <div className="text-center my-4">
         {showMessage && (

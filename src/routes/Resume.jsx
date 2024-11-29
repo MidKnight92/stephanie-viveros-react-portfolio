@@ -61,26 +61,28 @@ const education = (
 const Resume = ({ title }) => {
   useDocumentTitle({ title });
   return (
-    <div className="mt-10 md:absolute md:w-3/4 md:right-0 md:p-6">
+    <div className="mt-20 md:mt-2 md:absolute md:w-3/4 md:right-0 md:p-6">
       <h1 className="text-center mb-10">Resume</h1>
-      <section>
-        <h2 className="md:-mb-8 resume-project-section-header">
-          <span className="overline">Ex</span>perience
-        </h2>
-        {experience}
-      </section>
-      <section className="mt-10">
-        <h2 className="md:-mb-8 resume-project-section-header">
-          <span className="overline">Ed</span>ucation
-        </h2>
-        <div className="mb-6">{education}</div>
-      </section>
-      <section className="mt-8">
-        <h2 className="md:-mb-8 resume-project-section-header">
-          <span className="overline">Ce</span>rtifications
-        </h2>
-        {certifications}
-      </section>
+      <div className="m-10">
+        <section>
+          <h2 className="md:-mb-8 resume-project-section-header">
+            <span className="overline">Ex</span>perience
+          </h2>
+          {experience}
+        </section>
+        <section className="mt-10">
+          <h2 className="md:-mb-8 resume-project-section-header">
+            <span className="overline">Ed</span>ucation
+          </h2>
+          <div className="mb-6">{education}</div>
+        </section>
+        <section className="mt-8">
+          <h2 className="md:-mb-8 resume-project-section-header">
+            <span className="overline">Ce</span>rtifications
+          </h2>
+          {certifications}
+        </section>
+      </div>
       <div className="my-6">
         <a
           className="btn block mx-auto w-min text-center"
