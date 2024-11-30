@@ -117,7 +117,6 @@ const Contact = ({ title }) => {
           ></textarea>
         </label>
       </p>
-      <div data-netlify-recaptcha="true"></div>
       <p className="my-5">
         <button role="submit" aria-label="Send" className="btn" type="submit">
           Send
