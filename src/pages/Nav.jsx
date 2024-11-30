@@ -10,7 +10,7 @@ const Nav = () => {
     <nav
       role="navigation"
       aria-label="site navigation"
-      className="fixed top-0 z-50 w-full p-4 bg-black md:flex-col md:w-1/4 md:h-screen md:space-y-60"
+      className="fixed top-0 z-50 w-full p-4 bg-black md:flex-col md:w-1/4 md:h-screen md:space-y-60 md:z-0"
     >
         <div className="flex justify-between md:flex-none md:justify-normal">
           <Link

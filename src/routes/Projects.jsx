@@ -1,22 +1,17 @@
 import useGithubData from "../useGithubData";
 import useDocumentTitle from "../useDocumentTitle";
 import { githubUrl, projects } from "../constants";
-import { Suspense, useState, lazy } from "react";
+import { Suspense, lazy } from "react";
 import Loading from "../pages/Loading";
 
 const Videos = lazy(() => import("../pages/Videos"));
 
 const Projects = ({ title }) => {
-  const [displayOlderProjects, setDisplayOlderProjects] = useState(false);
   const data = useGithubData();
   useDocumentTitle({ title });
-  const isInDevelopmentMode = false;
 
-  const handleClick = () => {
-    setDisplayOlderProjects(!displayOlderProjects);
-  };
   return (
-    <div className="text-center mt-20 md:mt-2 md:absolute md:w-3/4 md:right-0 md:p-6">
+    <div className="text-center mt-20 md:mt-2 md:col-start-2 md:p-6">
       <h1>Projects</h1>
       <div className="m-10">
         <h2 className="resume-project-section-header mt-6">Newer Projects</h2>
@@ -37,42 +32,26 @@ const Projects = ({ title }) => {
             </a>
           </div>
         ))}
+        <section>
+          <h2 className="resume-project-section-header text-center mt-6">
+            Older Projects
+          </h2>
+          <Suspense fallback={<Loading />}>
+            <Videos />
+          </Suspense>
+        </section>
         <p className="mt-10">
-          This page is under development. In the meantime, please feel free to
-          take a look at my{" "}
+          I have {data.public_repos} repositories that include personal
+          projects, group work, assignments, and lessons from the beginning of
+          my software engineering journey. Please feel free to take a look at my{" "}
           <a
             className="text-gray-600 font-bold hover:underline"
             href={githubUrl}
           >
             GitHub
           </a>
-          . I have {data.public_repos} repositories that include personal
-          projects, group work, assignments, and lessons from the beginning of
-          my software engineering journey. Thank you for your understanding.
+          .
         </p>
-        {isInDevelopmentMode && (
-          <>
-            {!displayOlderProjects ? (
-              <button className="btn" onClick={handleClick}>
-                Show Older Projects
-              </button>
-            ) : (
-              <section>
-                <h2 className="resume-project-section-header text-center">
-                  Older Projects
-                </h2>
-                <Suspense fallback={<Loading />}>
-                  <Videos />
-                </Suspense>
-              </section>
-            )}
-            {displayOlderProjects && (
-              <button className="btn" onClick={handleClick}>
-                Close Older Projects
-              </button>
-            )}
-          </>
-        )}
       </div>
     </div>
   );

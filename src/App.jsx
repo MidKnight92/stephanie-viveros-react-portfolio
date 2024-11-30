@@ -5,8 +5,12 @@ const App = () => {
   return (
     <>
       <Nav />
-      <Outlet />
-      {/* <Footer /> */}
+      <div className="flex-col md:col-start-2">
+        <main className="flex-grow">
+          <Outlet />
+        </main>
+      </div>
+      <Footer />
     </>
   );
 };

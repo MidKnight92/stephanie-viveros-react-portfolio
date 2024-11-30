@@ -1,5 +1,5 @@
 import findGatsby from "./images/findGatsby.png";
-import battleAtSea from "./images/battle-at-sea-react.png"
+import battleAtSea from "./images/battle-at-sea-react.png";
 
 export const documentTitle = {
   home: "Stephanie Viveros | Home",
@@ -16,7 +16,7 @@ export const githubUrl = "https://api.github.com/midKnight92";
 const linkedinUrl = "https://www.linkedin.com/in/stephanie-viveros/";
 const phoneNumber = "te:+13128833708";
 export const email = "stephanie.viveros.dev@gmail.com";
-export const location = "Chicago, IL";
+export const location = "Chicago, IL 60601";
 export const resumeUrl =
   "https://docs.google.com/document/d/14taZmzSKYwsTdVMHeAdPs3aSg9U5ZA94pt1s56VxX8g/edit?usp=sharing";
 
@@ -32,13 +32,14 @@ export const projects = [
     projectName: "Find Gatsby",
     description: `Find Gatsby is an interactive and playful web application I developed using React and Styled Components. The app challenges users to help me locate my adventurous dog, Gatsby, by flipping cards to uncover his whereabouts and daily activities. It features dynamic animations, responsive design, and intuitive gameplay, providing an engaging user experience. This project showcases my front-end development skills, including state management, responsive styling, and interactive UI design.`,
     image: findGatsby,
-    url: "https://find-gatsby.netlify.app"
+    url: "https://find-gatsby.netlify.app",
   },
   {
     projectName: "Battle-At-Sea",
-    description: "Battle-At-Sea is my take on the classic multiplayer game, Battlefront, built with React, TypeScript, Zustand, and Styled Components. Currently in development, this project is an upgraded version of my original creation made with JavaScript and Node, showcasing my growth in crafting interactive and dynamic web applications.",
+    description:
+      "Battle-At-Sea is my take on the classic multiplayer game, Battlefront, built with React, TypeScript, Zustand, and Styled Components. Currently in development, this project is an upgraded version of my original creation made with JavaScript and Node, showcasing my growth in crafting interactive and dynamic web applications.",
     image: battleAtSea,
-    url: ""
+    url: "",
   },
 ];
 
@@ -176,6 +177,11 @@ export const resume = {
     },
     {
       title: "React: Design Patterns",
+      issuer: "LinkedIn Learning",
+      year: "2024",
+    },
+    {
+      title: "SQL Essential Training",
       issuer: "LinkedIn Learning",
       year: "2024",
     },

@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="absolute inset-x-0 bottom-0 text-center text-sm sm:text-xs">
-      <section className="mt-10">
+    <footer className="text-center mt-auto mx-auto text-sm sm:text-xs md:col-start-2">
+      <section>
         <div>
           <a
             href="https://www.privacypolicies.com/live/caace767-2c5e-4c67-ac58-948802b7bee2"

@@ -61,7 +61,7 @@ const education = (
 const Resume = ({ title }) => {
   useDocumentTitle({ title });
   return (
-    <div className="mt-20 md:mt-2 md:absolute md:w-3/4 md:right-0 md:p-6">
+    <div className="mt-20 md:mt-2 md:relative md:p-6">
       <h1 className="text-center mb-10">Resume</h1>
       <div className="m-10">
         <section>

@@ -1,6 +1,6 @@
 const IconLink = ({ iconInfo }) => {
   return (
-    <ul className="hidden lg:flex lg:flex-row justify-evenly mt-10">
+    <ul className="hidden md:flex md:flex-row justify-evenly mt-10">
       {iconInfo.map(({ icon, url }) => (
         <li key={icon}>
           <a target="_blank" href={url}>
