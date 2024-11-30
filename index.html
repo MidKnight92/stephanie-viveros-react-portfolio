@@ -26,6 +26,11 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body class="bg-[#e8e6e6] font-sans min-h-screen">
+    <form name="contact" netlify netlify-honeypot="bot-field"  data-netlify-recaptcha="true" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
     <div id="root" class="min-h-screen grid md:grid-cols-[1fr_3fr]"></div>
     <noscript>Please enable JavaScript to view this site.</noscript>
     <script type="module" src="/src/main.jsx"></script>
