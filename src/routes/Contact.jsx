@@ -2,7 +2,6 @@ import useDocumentTitle from "../useDocumentTitle";
 import { useState } from "react";
 import { Filter } from "bad-words";
 import { email, location } from "../constants";
-import Footer from "../pages/Footer";
 
 const Contact = ({ title }) => {
   useDocumentTitle({ title });
@@ -68,7 +67,7 @@ const Contact = ({ title }) => {
     >
       <input type="hidden" name="form-name" value="contact" />
       <p className="my-2">
-        <label for="name">
+        <label htmlFor="name">
           <span className="hidden">Name</span>
           <input
             aria-required="true"
@@ -83,7 +82,7 @@ const Contact = ({ title }) => {
         </label>
       </p>
       <p className="my-5">
-        <label for="email">
+        <label htmlFor="email">
           <span className="hidden">Email</span>
           <input
             aria-required="true"
@@ -98,7 +97,7 @@ const Contact = ({ title }) => {
         </label>
       </p>
       <p className="my-5">
-        <label for="message">
+        <label htmlFor="message">
           <span className="hidden">Message</span>
           <textarea
             aria-required="true"
