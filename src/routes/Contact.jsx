@@ -19,19 +19,19 @@ const Contact = ({ title }) => {
     if (!isProfane()) {
       const form = e.target;
       try {
-        const reponse = await fetch("/", {
+        const response = await fetch("/", {
           method: "POST",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
           },
           body: new URLSearchParams(new FormData(form)).toString(),
         });
-        if (reponse.ok) {
+        if (response.ok) {
           setMessage(thankYouMessage);
           setFormData({ name: "", email: "", message: "" });
         } else {
           setMessage(errorMessage);
-          throw new Error(`${reponse.status}: ${reponse.statusText}`);
+          throw new Error(`${response.status}: ${response.statusText}`);
         }
       } catch (error) {
         console.error(error);
@@ -63,13 +63,20 @@ const Contact = ({ title }) => {
       method="POST"
       data-netlify-recaptcha="true"
       data-netlify="true"
+      netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
+      <p className="hidden">
+        <label>
+          Don’t fill this out if you’re human: <input name="bot-field" />
+        </label>
+      </p>
       <p className="my-2">
         <label htmlFor="name">
           <span className="hidden">Name</span>
           <input
+            aria-label="Enter your name"
             aria-required="true"
             className="form-input"
             onChange={handleChange}
@@ -85,6 +92,7 @@ const Contact = ({ title }) => {
         <label htmlFor="email">
           <span className="hidden">Email</span>
           <input
+            aria-label="Enter your email"
             aria-required="true"
             className="form-input"
             onChange={handleChange}
@@ -100,6 +108,7 @@ const Contact = ({ title }) => {
         <label htmlFor="message">
           <span className="hidden">Message</span>
           <textarea
+            aria-label="Enter your message"
             aria-required="true"
             className="form-input"
             onChange={handleChange}
@@ -111,6 +120,7 @@ const Contact = ({ title }) => {
           ></textarea>
         </label>
       </p>
+      <div data-netlify-recaptcha="true"></div>
       <p className="my-5">
         <button role="submit" aria-label="Send" className="btn" type="submit">
           Send
