@@ -4,7 +4,7 @@ import meAndGatsby from "../images/me-and-Gatsby.jpg";
 const About = ({ title }) => {
   useDocumentTitle({ title });
   return (
-    <div className="mt-20 flex-wrap md:mt-2 md:main-content md:text-pretty">
+    <div className="mt-20 flex-wrap md:mt-2 md:p-6 md:text-pretty">
       <h1 className="text-center">About Me</h1>
       <div className="m-10">
         <img
