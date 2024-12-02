@@ -16,31 +16,39 @@ const About = ({ title }) => {
           <span className="font-bold">Hello again!</span> I’m a full-stack
           developer with experience in React, Angular, TypeScript, NestJS, Java,
           and Spring Boot. My journey into tech started in an unexpected
-          place—when my family and I launched our own business. I took on the
-          challenge of building our website with no prior coding experience, and
-          that experience sparked my passion for technology. It led me to
-          complete a full-time coding boot camp where I developed a solid
+          place—helping my family launch our business. I took on the challenge
+          of building our company’s website with no prior coding experience, and
+          that process sparked my passion for technology. It inspired me to
+          complete a full-time coding boot camp, where I built a solid
           foundation in web development.
         </p>
-
         <p className="mt-2">
-          Since then, I’ve been focused on growing my skills, taking courses
-          like Harvard’s CS50 Introduction to Computer Science and earning my
-          Oracle Java 8 Programming certification. Along the way, I’ve worked
-          with languages like C, Python, Java, JavaScript, and TypeScript,
-          showing my flexibility and enthusiasm for learning whatever tools are
-          needed to get the job done. My experience in retail and running my own
-          business has also sharpened my communication, problem-solving, and
-          time management skills, helping me thrive under pressure and adapt to
-          any challenge.
+          Since then, I’ve been focused on expanding my skills by taking courses
+          like{" "}
+          <span className="font-bold">
+            Harvard’s CS50 Introduction to Computer Science
+          </span>{" "}
+          and earning my{" "}
+          <span className="font-bold">
+            Oracle Java 8 Programming certification
+          </span>
+          . Along the way, I’ve worked with languages like C, Python, Java,
+          JavaScript, TypeScript as well as various libraries and frameworks. I’m always eager to adapt, learn, and take
+          on whatever challenges come my way.
         </p>
-
         <p className="mt-2">
-          I love creating websites that are both visually engaging and
-          user-friendly. Technology excites me because of its power to make a
-          positive impact, and I’m always eager to learn and take on new
-          challenges. When I’m not coding, you’ll probably find me walking along
-          Chicago’s lakefront or enjoying nature with my dog, Gatsby.
+          Before transitioning into tech, I worked in retail and helped run my
+          family’s business. Those experiences taught me how to juggle multiple
+          priorities, communicate effectively, and solve problems on the fly.
+          They also sharpened my time management skills and helped me thrive
+          under pressure—qualities that have been invaluable in my tech career.
+        </p>
+        <p className="mt-2">
+          These days, I love creating websites that are both visually engaging
+          and user-friendly. I’m fascinated by how technology can make a
+          positive impact and connect people in meaningful ways. When I’m not
+          coding, you’ll probably find me walking along Chicago’s lakefront or
+          enjoying the outdoors with my dog, Gatsby.
         </p>
       </div>
     </div>
