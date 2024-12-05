@@ -7,15 +7,13 @@ const SEO = ({ title, description, keywords, path }) => {
       <meta name="description" content={description} />
       <meta
         name="keywords"
-        content={`Stephanie Viveros, Chicago, Full-stack Developer, Full-stack Engineer, ${keywords}`}
+        content={`Stephanie Viveros, Chicago, Stephanie Viveros Developer, Viveros, Full-stack Developer, Full-stack Engineer, ${keywords}`}
       />
-      <meta property="og:title" content="Stephanie Viveros Portfolio" />
+      <meta property="og:title" content={title} />
       <meta
-        property="og:description"
-        content="Explore the portfolio of Stephanie Viveros, a skilled full-stack developer."
+        property="og:url"
+        content={`https://www.stephanieviveros.com/${path}`}
       />
-      <meta property="og:url" content="https://www.stephanieviveros.com" />
-      <meta property="og:type" content="website" />
       {!title.includes("404") && (
         <link
           rel="canonical"
