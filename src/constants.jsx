@@ -2,13 +2,12 @@ import findGatsby from "./images/findGatsby.png";
 import battleAtSea from "./images/battle-at-sea-react.png";
 
 export const documentTitle = {
-  home: "Stephanie Viveros | Home",
-  about: "Stephanie Viveros | About",
-  contact: "Stephanie Viveros | Contact",
-  projects: "Stephanie Viveros | Projects",
-  resume: "Stephanie Viveros | Resume",
-  terms: "Stephanie Viveros | Terms of Use",
-  error: "Stephanie Viveros | Not Found",
+  home: "Home - Stephanie Viveros",
+  about: "About Me - Stephanie Viveros",
+  contact: "Contact Me - Stephanie Viveros",
+  projects: "Projects - Stephanie Viveros",
+  resume: "Resume - Stephanie Viveros",
+  error: "404 - Page Not Found",
 };
 
 export const githubAPIUrl = "https://api.github.com/users/midKnight92";

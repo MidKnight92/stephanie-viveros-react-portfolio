@@ -1,13 +1,11 @@
-import useDocumentTitle from "../useDocumentTitle";
 import meAndGatsby from "../images/me-and-Gatsby.jpg";
 import SEO from "../seo/SEO";
 
 const About = ({ title }) => {
-  useDocumentTitle({ title });
   return (
     <div className="mt-20 flex-wrap md:mt-2 md:p-6 md:text-pretty">
       <SEO
-        title="About Me - Stephanie Viveros"
+        title={title}
         description="Learn more about Stephanie Viveros, a passionate full-stack developer specializing in TypeScript, JavaScript, React, Angular and more."
         keywords="About"
         path="about"

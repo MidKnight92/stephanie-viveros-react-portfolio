@@ -16,7 +16,15 @@ const SEO = ({ title, description, keywords, path }) => {
       />
       <meta property="og:url" content="https://www.stephanieviveros.com" />
       <meta property="og:type" content="website" />
-      <link rel="canonical" href={`https://www.stephanieviveros.com/${path}`} />
+      {!title.includes("404") && (
+        <link
+          rel="canonical"
+          href={`https://www.stephanieviveros.com/${path}`}
+        />
+      )}
+      {title.includes("404") && (
+        <meta name="robots" content="noindex, nofollow" />
+      )}
     </Helmet>
   );
 };

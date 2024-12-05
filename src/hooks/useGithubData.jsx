@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { githubAPIUrl } from "./constants";
+import { githubAPIUrl } from "../constants";
 
 export default () => {
   const [data, setData] = useState({});

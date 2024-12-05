@@ -1,5 +1,4 @@
-import useGithubData from "../useGithubData";
-import useDocumentTitle from "../useDocumentTitle";
+import useGithubData from "../hooks/useGithubData";
 import { githubUrl, projects } from "../constants";
 import { Suspense, lazy } from "react";
 import Loading from "../pages/Loading";
@@ -9,12 +8,10 @@ const Videos = lazy(() => import("../pages/Videos"));
 
 const Projects = ({ title }) => {
   const data = useGithubData();
-  useDocumentTitle({ title });
-
   return (
     <div className="text-center mt-20 md:mt-2 md:col-start-2 md:p-6">
       <SEO
-        title="Projects - Stephanie Viveros"
+        title={title}
         description="Projects of Stephanie Viveros"
         keywords="Projects"
         path="projects"

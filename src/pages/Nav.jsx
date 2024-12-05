@@ -12,44 +12,44 @@ const Nav = () => {
       aria-label="site navigation"
       className="fixed top-0 z-50 w-full p-4 bg-black md:flex-col md:w-1/4 md:h-screen md:space-y-60 md:z-0"
     >
-        <div className="flex justify-between md:flex-none md:justify-normal">
-          <Link
-            to={nav[0].path}
-            className={`text-white nav font-bold md:mx-auto mt-1 md:text-xl`}
-            style={{
-              textShadow: "2px 2px 2px rgb(75,85,99)",
-            }}
-          >
-            {nav[0].label}
-          </Link>
-          <i
-            onClick={handleClick}
-            className={`fa-solid ${
-              isOpen ? "fa-x" : "fa-bars"
-            } fa-lg md:hidden mt-4 mr-4`}
-            style={{ color: "whitesmoke" }}
-          ></i>
-        </div>
-        <ul
-          className={`${
-            isOpen ? "block" : "hidden"
-          } md:block font-bold text-center divide-y-2 divide-gray-600`}
+      <div className="flex justify-between md:flex-none md:justify-normal">
+        <Link
+          to={nav[0].path}
+          className={`text-white nav font-bold md:mx-auto mt-1 md:text-xl`}
+          style={{
+            textShadow: "2px 2px 2px rgb(75,85,99)",
+          }}
         >
-          {nav.slice(1).map(({ label, path }) => (
-            <li key={label} className="py-2" onClick={handleClick}>
-              <Link
-                to={path}
-                className={`text-white nav text-base font-bold block`}
-                style={{
-                  textShadow: "2px 2px 2px rgb(75,85,99)",
-                }}
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <IconLink iconInfo={iconInfo} />
+          {nav[0].label}
+        </Link>
+        <i
+          onClick={handleClick}
+          className={`fa-solid ${
+            isOpen ? "fa-x" : "fa-bars"
+          } fa-lg md:hidden mt-4 mr-4`}
+          style={{ color: "whitesmoke" }}
+        ></i>
+      </div>
+      <ul
+        className={`${
+          isOpen ? "block" : "hidden"
+        } md:block font-bold text-center divide-y-2 divide-gray-600`}
+      >
+        {nav.slice(1).map(({ label, path }) => (
+          <li key={label} className="py-2" onClick={handleClick}>
+            <Link
+              to={path}
+              className={`text-white nav text-base font-bold block`}
+              style={{
+                textShadow: "2px 2px 2px rgb(75,85,99)",
+              }}
+            >
+              {label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <IconLink iconInfo={iconInfo} />
     </nav>
   );
 };

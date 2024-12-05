@@ -1,11 +1,9 @@
-import useDocumentTitle from "../useDocumentTitle";
 import { useState } from "react";
 import { Filter } from "bad-words";
 import { email, location } from "../constants";
 import SEO from "../seo/SEO";
 
 const Contact = ({ title }) => {
-  useDocumentTitle({ title });
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -152,7 +150,7 @@ const Contact = ({ title }) => {
   return (
     <div className="flex-col mt-20 md:mt-2 p-2 text-pretty md:fixed md:w-3/4 md:right-0 md:p-6 md:flex-none">
       <SEO
-        title="Contact Me - Stephanie Viveros"
+        title={title}
         description="Contact Stephanie Viveros."
         keywords="Contact"
         path="contact"

@@ -1,4 +1,3 @@
-import useDocumentTitle from "../useDocumentTitle";
 import { resume, resumeUrl } from "../constants";
 import SEO from "../seo/SEO";
 
@@ -60,11 +59,10 @@ const education = (
 );
 
 const Resume = ({ title }) => {
-  useDocumentTitle({ title });
   return (
     <div className="mt-20 md:mt-2 md:relative md:p-6">
       <SEO
-        title="Resume - Stephanie Viveros"
+        title={title}
         description="Resume of Stephanie Viveros."
         keywords="Resume"
         path="resume"

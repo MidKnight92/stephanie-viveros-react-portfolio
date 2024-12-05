@@ -1,9 +1,7 @@
-import useDocumentTitle from "../useDocumentTitle";
 import me from "../images/me-blue-floral-gray-big.jpg";
 import SEO from "../seo/SEO";
 
 const Home = ({ title }) => {
-  useDocumentTitle({ title });
   return (
     <div
       className="h-screen w-full bg-cover fixed bg-top bg-no-repeat text-white md:w-3/4 md:right-0"
@@ -14,7 +12,7 @@ const Home = ({ title }) => {
       aria-hidden="true"
     >
       <SEO
-        title="Home - Stephanie Viveros"
+        title={title}
         description="Stephanie Viveros, a passionate full-stack developer out of Chicago."
         keywords="Home"
         path="home"
