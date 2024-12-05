@@ -1,5 +1,6 @@
 import useDocumentTitle from "../useDocumentTitle";
 import me from "../images/me-blue-floral-gray-big.jpg";
+import SEO from "../seo/SEO";
 
 const Home = ({ title }) => {
   useDocumentTitle({ title });
@@ -12,6 +13,12 @@ const Home = ({ title }) => {
       }}
       aria-hidden="true"
     >
+      <SEO
+        title="Home - Stephanie Viveros"
+        description="Stephanie Viveros, a passionate full-stack developer out of Chicago."
+        keywords="Home"
+        path="home"
+      />
       <div className="absolute inset-0 bg-black bg-opacity-25"></div>
       <main className="fixed bottom-10">
         <section className="flex flex-col p-4">

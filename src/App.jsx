@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom";
 import Nav from "./pages/Nav";
 import Footer from "./pages/Footer";
+import { HelmetProvider } from "react-helmet-async";
 const App = () => {
   return (
-    <>
+    <HelmetProvider>
       <Nav />
       <div className="flex-col md:col-start-2">
         <main className="flex-grow">
@@ -11,7 +12,7 @@ const App = () => {
         </main>
       </div>
       <Footer />
-    </>
+    </HelmetProvider>
   );
 };
 

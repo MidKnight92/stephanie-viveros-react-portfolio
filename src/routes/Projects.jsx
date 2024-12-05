@@ -3,6 +3,7 @@ import useDocumentTitle from "../useDocumentTitle";
 import { githubUrl, projects } from "../constants";
 import { Suspense, lazy } from "react";
 import Loading from "../pages/Loading";
+import SEO from "../seo/SEO";
 
 const Videos = lazy(() => import("../pages/Videos"));
 
@@ -12,6 +13,12 @@ const Projects = ({ title }) => {
 
   return (
     <div className="text-center mt-20 md:mt-2 md:col-start-2 md:p-6">
+      <SEO
+        title="Projects - Stephanie Viveros"
+        description="Projects of Stephanie Viveros"
+        keywords="Projects"
+        path="projects"
+      />
       <h1>Projects</h1>
       <div className="m-10">
         <h2 className="resume-project-section-header mt-6">Newer Projects</h2>

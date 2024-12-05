@@ -1,10 +1,17 @@
 import useDocumentTitle from "../useDocumentTitle";
 import meAndGatsby from "../images/me-and-Gatsby.jpg";
+import SEO from "../seo/SEO";
 
 const About = ({ title }) => {
   useDocumentTitle({ title });
   return (
     <div className="mt-20 flex-wrap md:mt-2 md:p-6 md:text-pretty">
+      <SEO
+        title="About Me - Stephanie Viveros"
+        description="Learn more about Stephanie Viveros, a passionate full-stack developer specializing in TypeScript, JavaScript, React, Angular and more."
+        keywords="About"
+        path="about"
+      />
       <h1 className="text-center">About Me</h1>
       <div className="m-10">
         <img
@@ -33,8 +40,9 @@ const About = ({ title }) => {
             Oracle Java 8 Programming certification
           </span>
           . Along the way, I’ve worked with languages like C, Python, Java,
-          JavaScript, TypeScript as well as various libraries and frameworks. I’m always eager to adapt, learn, and take
-          on whatever challenges come my way.
+          JavaScript, TypeScript as well as various libraries and frameworks.
+          I’m always eager to adapt, learn, and take on whatever challenges come
+          my way.
         </p>
         <p className="mt-2">
           Before transitioning into tech, I worked in retail and helped run my
