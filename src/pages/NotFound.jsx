@@ -5,7 +5,7 @@ const NotFound = ({ title }) => {
   const error = useRouteError();
   console.log(error);
   return (
-    <div className="mt-10 text-center md:col-start-2">
+    <div className="flex flex-col align-center text-center justify-center min-h-screen p-6">
       <SEO
         title={title}
         description="Sorry, the page you are looking for doesn't exist. Please check the URL or return to the homepage."
