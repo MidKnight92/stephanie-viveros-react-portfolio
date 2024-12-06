@@ -1,4 +1,4 @@
-import meAndGatsby from "../images/me-and-Gatsby.jpg";
+import meAndGatsby from "../images/Stephanie-Viveros-and-Gatsby.jpg";
 import SEO from "../seo/SEO";
 
 const About = ({ title }) => {
@@ -9,6 +9,17 @@ const About = ({ title }) => {
         description="Learn more about Stephanie Viveros, a passionate full-stack developer specializing in TypeScript, JavaScript, React, Angular and more."
         keywords="About"
         path="about"
+        schema={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About Me",
+          "description": "Learn more about Stephanie Viveros, a passionate full-stack developer specializing in TypeScript, JavaScript, React, Angular and more.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Stephanie Viveros Developer",
+            "url": "https://www.stephanieviveros.com"
+          }
+        })}
       />
       <h1 className="text-center">About Me</h1>
       <div className="m-10">

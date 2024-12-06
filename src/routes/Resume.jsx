@@ -66,6 +66,44 @@ const Resume = ({ title }) => {
         description="Resume of Stephanie Viveros."
         keywords="Resume"
         path="resume"
+        schema={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Stephanie Ann Viveros",
+          url: "https://www.stephanieviveros.com/resume",
+          sameAs: [
+            "https://www.linkedin.com/in/stephanie-viveros",
+            "https://github.com/stephanie-viveros",
+            "https://github.com/MidKnight92",
+          ],
+          "description":
+            "Experienced Software Engineer actievely seeking new opportunities in Front-end development, working with React or Angular.",
+          jobTitle: "Software Engineer",
+          seekingOpportunities: true,
+          skills: [
+            "JavaScript",
+            "React",
+            "Angular",
+            "Node.js",
+            "Java",
+            "TypeScript",
+            "Spring Boot",
+            "Web Development",
+          ],
+          alumniOf: {
+            "@type": "EducationalOrganization",
+            name: "Purdue University - Calumet",
+          },
+          hasCredential: {
+            "@type": "EducationalOccupationalCredential",
+            credentialCategory: "Bachelor's Degree",
+            educationalLevel: "Undergraduate",
+            recognizedBy: {
+              "@type": "EducationalOrganization",
+              name: "Purdue University - Calumet",
+            },
+          },
+        })}
       />
       <h1 className="text-center mb-10">Resume</h1>
       <div className="m-10">

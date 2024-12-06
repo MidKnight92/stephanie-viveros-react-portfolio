@@ -1,4 +1,4 @@
-import me from "../images/me-blue-floral-gray-big.jpg";
+import me from "../images/Stephanie-Viveros.jpg";
 import SEO from "../seo/SEO";
 
 const Home = ({ title }) => {
@@ -16,6 +16,12 @@ const Home = ({ title }) => {
         description="Stephanie Viveros, a passionate full-stack developer out of Chicago."
         keywords="Home"
         path="home"
+        schema={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "https://www.stephanieviveros.com",
+          "name": "Stephanie Viveros Developer",
+        })}
       />
       <div className="absolute inset-0 bg-black bg-opacity-25"></div>
       <main className="fixed bottom-10">

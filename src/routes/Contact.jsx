@@ -154,6 +154,13 @@ const Contact = ({ title }) => {
         description="Contact Stephanie Viveros."
         keywords="Contact"
         path="contact"
+        schema={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Me",
+          "description": "Contact Stephanie Viveros.",
+          "url": "https://www.stephanieviveros.com/contact"
+        })}
       />
       <h1 className="text-center">Contact Me</h1>
       <div className="text-center my-4">
