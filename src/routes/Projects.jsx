@@ -51,6 +51,7 @@ const Projects = ({ title }) => {
           <a
             className="text-gray-600 font-bold hover:underline"
             href={githubUrl}
+            target="_blank"
           >
             GitHub
           </a>

@@ -11,7 +11,7 @@ export const documentTitle = {
 };
 
 export const githubAPIUrl = "https://api.github.com/users/midKnight92";
-export const githubUrl = "https://api.github.com/midKnight92";
+export const githubUrl = "https://github.com/MidKnight92";
 const linkedinUrl = "https://www.linkedin.com/in/stephanie-viveros/";
 const phoneNumber = "te:+13128833708";
 export const email = "stephanie.viveros.dev@gmail.com";
@@ -51,7 +51,7 @@ export const nav = [
 ];
 
 export const iconInfo = [
-  { icon: "fa-brands fa-github", url: githubAPIUrl },
+  { icon: "fa-brands fa-github", url: githubUrl },
   { icon: "fa-brands fa-linkedin", url: linkedinUrl },
   { icon: "fa-solid fa-file-lines", url: resumeUrl },
 ];
@@ -193,3 +193,19 @@ export const srcPaths = [
   "qJHvN7Vcmso?si=upxwYl8QY2Xw9Fkm",
   "DJ84-YiamUc?si=W1tUbMjOzIXi63X3",
 ];
+
+export const thankYouMessage =
+  "Thanks for your message! I’m looking forward to connecting and exploring how we can build something great together! Talk to you soon.";
+
+export const errorMessage =
+  "Oops! Something went wrong while sending your message. Please try again, or feel free to reach out to me directly. I’m excited to connect and I will get in touch soon!";
+
+export const profanityMessage =
+  "Your input contains language that is not allowed. Please revise your entry and try again.";
+
+export const invalidNameMessage = "Name should only contain 2 or more letters.";
+
+export const invalidEmailMessage =
+  "Please enter valid email. (example@domain.com)";
+
+export const invalidTextMessage = "Your message cannot be empty.";

@@ -49,7 +49,11 @@ const Nav = () => {
           </li>
         ))}
       </ul>
-      <IconLink iconInfo={iconInfo} />
+      <IconLink
+        iconInfo={iconInfo}
+        style={{ color: "whitesmoke" }}
+        ulStyle="hidden md:flex md:flex-row justify-evenly mt-10"
+      />
     </nav>
   );
 };
