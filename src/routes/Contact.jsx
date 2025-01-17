@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Filter } from "bad-words";
 import SEO from "../seo/SEO";
 import Form from "../components/Form";
-import { errorMessage } from "../constants";
+import { errorMessage, thankYouMessage, profanityMessage } from "../constants";
 import ContactInfo from "../components/ContactInfo";
 import isValid from "../valid";
 
