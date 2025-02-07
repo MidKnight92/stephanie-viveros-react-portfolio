@@ -17,7 +17,6 @@ const Home = ({ title }) => {
         title={title}
         description="Stephanie Viveros, a passionate full-stack developer out of Chicago."
         keywords="Home"
-        path="home"
         schema={JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
@@ -26,7 +25,7 @@ const Home = ({ title }) => {
         })}
       />
       <div className="absolute inset-0 bg-black bg-opacity-25"></div>
-      <main className="fixed bottom-10">
+      <div className="fixed bottom-10">
         <section className="flex flex-col p-4">
           <h1>Hello, I'm Stephanie!</h1>
           <h2 className="text-bolder mt-2 md:ml-20 md:mt-10 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
@@ -42,7 +41,7 @@ const Home = ({ title }) => {
             ulStyle="flex justify-evenly md:hidden"
           />
         </section>
-      </main>
+      </div>
     </div>
   );
 };

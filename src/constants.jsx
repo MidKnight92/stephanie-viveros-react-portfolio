@@ -43,7 +43,7 @@ export const projects = [
 ];
 
 export const nav = [
-  { path: "/home", label: "< SV />" },
+  { path: "/", label: "< SV />" },
   { path: "/about", label: "About" },
   { path: "/resume", label: "Resume" },
   { path: "/projects", label: "Projects" },
@@ -51,9 +51,17 @@ export const nav = [
 ];
 
 export const iconInfo = [
-  { icon: "fa-brands fa-github", url: githubUrl },
-  { icon: "fa-brands fa-linkedin", url: linkedinUrl },
-  { icon: "fa-solid fa-file-lines", url: resumeUrl },
+  { icon: "fa-brands fa-github", url: githubUrl, label: "Github profile" },
+  {
+    icon: "fa-brands fa-linkedin",
+    url: linkedinUrl,
+    label: "LinkedIn profile",
+  },
+  {
+    icon: "fa-solid fa-file-lines",
+    url: resumeUrl,
+    label: "View resume on Google Docs",
+  },
 ];
 
 export const resume = {

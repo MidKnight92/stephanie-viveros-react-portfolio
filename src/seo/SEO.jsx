@@ -15,12 +15,12 @@ const SEO = ({ title, description, keywords, path, schema }) => {
       <meta property="og:title" content={title} />
       <meta
         property="og:url"
-        content={`https://www.stephanieviveros.com/${path}`}
+        content={`https://www.stephanieviveros.com/${path ?? ''}`}
       />
       {!title.includes("404") && (
         <link
           rel="canonical"
-          href={`https://www.stephanieviveros.com/${path}`}
+          href={`https://www.stephanieviveros.com/${path ?? ''}`}
         />
       )}
       {title.includes("404") && (

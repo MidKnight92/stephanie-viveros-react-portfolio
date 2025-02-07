@@ -28,7 +28,11 @@ const Nav = () => {
             isOpen ? "fa-x" : "fa-bars"
           } fa-lg md:hidden mt-4 mr-4`}
           style={{ color: "whitesmoke" }}
-        ></i>
+        >
+          <span className="text-[0.625rem] tracking-tighter block mt-4 font-thin absolute right-[1.7rem]">
+            {!isOpen && "Menu"}
+          </span>
+        </i>
       </div>
       <ul
         className={`${
