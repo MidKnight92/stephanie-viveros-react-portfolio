@@ -22,17 +22,22 @@ const Nav = () => {
         >
           {nav[0].label}
         </Link>
-        <i
+        <button
           onClick={handleClick}
-          className={`fa-solid ${
-            isOpen ? "fa-x" : "fa-bars"
-          } fa-lg md:hidden mt-4 mr-4`}
-          style={{ color: "whitesmoke" }}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
         >
-          <span className="text-[0.625rem] tracking-tighter block mt-4 font-thin absolute right-[1.7rem]">
-            {!isOpen && "Menu"}
-          </span>
-        </i>
+          <i
+            className={`fa-solid ${
+              isOpen ? "fa-x" : "fa-bars"
+            } fa-lg md:hidden mt-4 mr-4`}
+            style={{ color: "whitesmoke" }}
+          >
+            <span className="text-[0.35rem] mt-4 tracking-[0.25em] block absolute right-[1.8rem]">
+              {!isOpen && "Menu"}
+            </span>
+          </i>
+        </button>
       </div>
       <ul
         className={`${
