@@ -16,13 +16,14 @@ const About = ({ title }) => {
         schema={JSON.stringify({
           "@context": "https://schema.org",
           "@type": "AboutPage",
-          "name": "About Me",
-          "description": "Learn more about Stephanie Viveros, a passionate full-stack developer specializing in TypeScript, JavaScript, React, Angular and more.",
-          "publisher": {
+          name: "About Me",
+          description:
+            "Learn more about Stephanie Viveros, a passionate full-stack developer specializing in TypeScript, JavaScript, React, Angular and more.",
+          publisher: {
             "@type": "Organization",
-            "name": "Stephanie Viveros Developer",
-            "url": "https://www.stephanieviveros.com"
-          }
+            name: "Stephanie Viveros Developer",
+            url: "https://www.stephanieviveros.com",
+          },
         })}
       />
       <h1 className="text-center">About Me</h1>
@@ -44,18 +45,11 @@ const About = ({ title }) => {
         </p>
         <p className="mt-2">
           Since then, I’ve been focused on expanding my skills by taking courses
-          like{" "}
-          <span className="font-bold">
-            Harvard’s CS50 Introduction to Computer Science
-          </span>{" "}
-          and earning my{" "}
-          <span className="font-bold">
-            Oracle Java 8 Programming certification
-          </span>
-          . Along the way, I’ve worked with languages like C, Python, Java,
-          JavaScript, TypeScript as well as various libraries and frameworks.
-          I’m always eager to adapt, learn, and take on whatever challenges come
-          my way.
+          like Harvard’s CS50 Introduction to Computer Science and earning my
+          Oracle Java 8 Programming certification . Along the way, I’ve worked
+          with languages like C, Python, Java, JavaScript, TypeScript as well as
+          various libraries and frameworks. I’m always eager to adapt, learn,
+          and take on whatever challenges come my way.
         </p>
         <p className="mt-2">
           Before transitioning into tech, I worked in retail and helped run my

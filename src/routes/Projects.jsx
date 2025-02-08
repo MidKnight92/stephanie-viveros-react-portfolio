@@ -53,7 +53,7 @@ const Projects = ({ title }) => {
           projects, group work, assignments, and lessons from the beginning of
           my software engineering journey. Please feel free to take a look at my{" "}
           <a
-            className="text-gray-600 font-bold hover:underline"
+            className="text-gray-600 font-bold underline active:no-underline"
             href={githubUrl}
             target="_blank"
           >
