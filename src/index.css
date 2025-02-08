@@ -21,6 +21,11 @@
 }
 
 @layer components {
+
+  #main-content:focus {
+    outline: none;
+  }
+
   .footer-link {
     @apply block 
         hover:underline;
