@@ -71,7 +71,11 @@ const Contact = ({ title }) => {
   };
 
   return (
-    <div className="flex-col mt-20 md:mt-2 p-2 text-pretty md:fixed md:w-3/4 md:right-0 md:p-6 md:flex-none">
+    <div
+      className="flex-col mt-20 md:mt-2 p-2 text-pretty md:fixed md:w-3/4 md:right-0 md:p-6 md:flex-none"
+      id="main-content"
+      tabIndex="-1"
+    >
       <SEO
         title={title}
         description="Contact Stephanie Viveros."

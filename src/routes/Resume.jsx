@@ -60,7 +60,11 @@ const education = (
 
 const Resume = ({ title }) => {
   return (
-    <div className="mt-20 md:mt-2 md:relative md:p-6">
+    <div
+      className="mt-20 md:mt-2 md:relative md:p-6"
+      id="main-content"
+      tabIndex="-1"
+    >
       <SEO
         title={title}
         description="Resume of Stephanie Viveros."

@@ -9,7 +9,11 @@ const Videos = lazy(() => import("../pages/Videos"));
 const Projects = ({ title }) => {
   const data = useGithubData();
   return (
-    <div className="text-center mt-20 md:mt-2 md:col-start-2 md:p-6">
+    <div
+      className="text-center mt-20 md:mt-2 md:col-start-2 md:p-6"
+      id="main-content"
+      tabIndex="-1"
+    >
       <SEO
         title={title}
         description="Projects of Stephanie Viveros"

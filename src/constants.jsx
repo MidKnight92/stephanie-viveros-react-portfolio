@@ -60,7 +60,7 @@ export const iconInfo = [
   {
     icon: "fa-solid fa-file-lines",
     url: resumeUrl,
-    label: "View resume on Google Docs",
+    label: "View résumé on Google Docs",
   },
 ];
 
