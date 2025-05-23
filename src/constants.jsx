@@ -1,5 +1,7 @@
 import findGatsby from "./images/findGatsby.png";
 import battleAtSea from "./images/battle-at-sea-react.png";
+import tbbb from "./images/tbbb.png";
+import stj from "./images/splitTheJar.png";
 
 export const documentTitle = {
   home: "Home - Stephanie Viveros",
@@ -28,6 +30,18 @@ export const contactInfo = [
 
 export const projects = [
   {
+    projectName: "Tech Bit-by-Bit",
+    description: `Tech Bit-by-Bit is a beginner-friendly tech media site that breaks down complex tech concepts into simple, relatable explanations—one bit at a time. It’s perfect for beginners, curious minds, and anyone who’s ever felt lost in the jargon. The site is modified and personalized from the tailwind-nextjs-starter blog and built with Next.js, Tailwind CSS, Contentlayer, and Umami. I’ve also added Clerk, Cusdis, Google AdSense, and more. Expected to deploy on Vercel mid-June.`,
+    image: tbbb,
+    url: "",
+  },
+  {
+    projectName: "Split the Jar",
+    description: `Split the Jar takes the guesswork out of “who gets what.” It’s fair, it’s fast, and it doesn’t spill. A thoughtfully crafted tool that keeps things smooth when it’s time to divvy things up—no broken jars, just balanced outcomes. Built with Next.js, Material UI, and a dash of other good stuff. Expected sometime after the Tech Bit-by-Bit launch.`,
+    image: stj,
+    url: "",
+  },
+  {
     projectName: "Find Gatsby",
     description: `Find Gatsby is an interactive and playful web application I developed using React and Styled Components. The app challenges users to help me locate my adventurous dog, Gatsby, by flipping cards to uncover his whereabouts and daily activities. It features dynamic animations, responsive design, and intuitive gameplay, providing an engaging user experience. This project showcases my front-end development skills, including state management, responsive styling, and interactive UI design.`,
     image: findGatsby,
@@ -36,7 +50,7 @@ export const projects = [
   {
     projectName: "Battle-At-Sea",
     description:
-      "Battle-At-Sea is my take on the classic multiplayer game, Battlefront, built with React, TypeScript, Zustand, and Styled Components. Currently in development, this project is an upgraded version of my original creation made with JavaScript and Node, showcasing my growth in crafting interactive and dynamic web applications.",
+      "Battle-At-Sea is my take on the classic multiplayer game Battlefront, rebuilt with React, TypeScript, Zustand, and Styled Components. Currently on hold while I focus on other projects, this project is an upgraded version of my original JavaScript and Node-based game—showcasing my growth in building interactive, dynamic web applications.",
     image: battleAtSea,
     url: "",
   },
