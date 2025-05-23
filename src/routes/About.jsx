@@ -35,7 +35,7 @@ const About = ({ title }) => {
         />
         <p className="mt-2">
           <span className="font-bold">Hello again!</span> I’m a full-stack
-          developer with experience in React, Angular, TypeScript, NestJS, Java,
+          developer with experience in React, Next.js, Angular, TypeScript, NestJS, Java,
           and Spring Boot. My journey into tech started in an unexpected
           place—helping my family launch our business. I took on the challenge
           of building our company’s website with no prior coding experience, and

@@ -2,6 +2,7 @@ import findGatsby from "./images/findGatsby.png";
 import battleAtSea from "./images/battle-at-sea-react.png";
 import tbbb from "./images/tbbb.png";
 import stj from "./images/splitTheJar.png";
+import ogp  from "./images/ogPortfolio.png"
 
 export const documentTitle = {
   home: "Home - Stephanie Viveros",
@@ -53,6 +54,12 @@ export const projects = [
       "Battle-At-Sea is my take on the classic multiplayer game Battlefront, rebuilt with React, TypeScript, Zustand, and Styled Components. Currently on hold while I focus on other projects, this project is an upgraded version of my original JavaScript and Node-based game—showcasing my growth in building interactive, dynamic web applications.",
     image: battleAtSea,
     url: "",
+  },
+  {
+    projectName: "Original Portfolio",
+    description: "My original portfolio, built in 2020 using HTML and SCSS.",
+    image: ogp,
+    url: "https://midknight92.github.io/",
   },
 ];
 

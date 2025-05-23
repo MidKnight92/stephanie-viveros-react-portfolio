@@ -36,7 +36,7 @@ const Projects = ({ title }) => {
               href={url}
               target="_blank"
             >
-              {url ? `Play ${projectName}` : "Coming Soon"}
+              {url ? `Launch ${projectName}` : "Coming Soon"}
             </a>
           </div>
         ))}
